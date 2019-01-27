@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Page Title</title>
     <style>
-        
         #formbox{
             float: left;
             padding: 20px;
@@ -17,7 +16,6 @@
             padding: 20px;
             border: 1px solid black;
         }
-
     </style>
 </head>
 <body>
@@ -44,7 +42,7 @@
             addEventListener('message',primenjena);
             function send(){
                 var name = document.getElementById('name').value;
-                window.postMessage(name,'https://milovan1234.github.io/');
+                window.postMessage(name,'https://milovan1234.github.io/index.html');
             }
         }
         function primenjena(e){
@@ -53,7 +51,5 @@
         }
         addEventListener('load',initiate);
     </script>
-
-
 </body>
 </html>
