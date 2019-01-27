@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <title>Page Title</title>
     <style>
-        #formbox{
-            float: left;
+    
+    #formbox{
             padding: 20px;
             border: 1px solid black;
+            width: 500px;
+            margin-left: 20px;
         }
         #databox{
-            float: left;
             width: 500px;
             margin-left: 20px;
             padding: 20px;
@@ -19,36 +20,31 @@
     </style>
 </head>
 <body>
+
+    <section id="databox">
+        <iframe src="https://milovan1234.github.io/iframe.html" frameborder="0" id="iframe" width="500" height="350"></iframe>
+    </section>
     <section id="formbox">
         <form name="form">
-            <label for="name">Moja poruka: </label>
-            <textarea name="" id="name" cols="30" rows="10"></textarea>
+            <label for="name">Your name: </label>
+            <input type="text" name="name" id="name" required>
             <input type="button" id="button" value="Send">
         </form>
     </section>
-    <section id="formbox">
-            <form name="form">
-                <label for="poruka">Milovanova poruka: </label>
-                <textarea name="" id="poruka" cols="30" rows="10"></textarea>
-            </form>
-        </section>
-    </section>
-
     <script>
-        function initiate()
-        {
+        function initiate(){
             var button = document.getElementById('button');
             button.addEventListener('click',send);
-            addEventListener('message',primenjena);
-            function send(){
-                var name = document.getElementById('name').value;
-                window.postMessage(name,'https://milovan1234.github.io/index.html');
+            addEventListener('message',reciever);
+        }
+        function send(){
+            var name = document.getElementById('name').value;
+            var iframe = document.getElementById('iframe');
+            iframe.contentWindow.postMessage(name,'*');
+        }
+        function reciever(e){
+                document.getElementById('name').value = e.data;
             }
-        }
-        function primenjena(e){
-            var poruka = document.getElementById('poruka');
-            poruka.innerHTML += 'Message: '+ e.data;
-        }
         addEventListener('load',initiate);
     </script>
 </body>
