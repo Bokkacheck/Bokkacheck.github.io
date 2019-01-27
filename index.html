@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <style>
+        
+        #formbox{
+            float: left;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        #databox{
+            float: left;
+            width: 500px;
+            margin-left: 20px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="formbox">
+        <form name="form">
+            <label for="name">Moja poruka: </label>
+            <textarea name="" id="name" cols="30" rows="10"></textarea>
+            <input type="button" id="button" value="Send">
+        </form>
+    </section>
+    <section id="formbox">
+            <form name="form">
+                <label for="poruka">Milovanova poruka: </label>
+                <textarea name="" id="poruka" cols="30" rows="10"></textarea>
+            </form>
+        </section>
+    </section>
+
+    <script>
+        function initiate()
+        {
+            var button = document.getElementById('button');
+            button.addEventListener('click',send);
+            addEventListener('message',primenjena);
+            function send(){
+                var name = document.getElementById('name').value;
+                window.postMessage(name,'https://milovan1234.github.io/');
+            }
+        }
+        function primenjena(e){
+            var poruka = document.getElementById('poruka');
+            poruka.innerHTML += 'Message: '+ e.data;
+        }
+        addEventListener('load',initiate);
+    </script>
+
+
+</body>
+</html>
