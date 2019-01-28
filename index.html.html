@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #pozadina{
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            background-color: lightgray;
+            height: 60vh;
+            margin: 0 auto;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+        #pozadina>div{
+            height: 13vh;
+            width: 23%;
+            background-color: red;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        #pozadina>div>div{
+            margin-top: 2vh;
+            width: 80%;
+            height: 9vh;
+        }
+        #slicice{
+            height: 34vh;
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            margin: 0 auto;
+            background-color: lightgray;
+        }
+        #komande{
+            margin: 0 auto;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            background-color: darkslategray;
+            height: 5vh;
+        }
+        #slicice>div{
+            width: 21%;
+            height: 8vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="pozadina"></div>
+    <div id="komande">
+        <button id="random">RANDOM</button>
+        <button id="start" onclick="start()">START</button>
+    </div>
+    <div id="slicice"></div>
+    <script>
+        function postavi(){
+            var pozadina = document.getElementById('pozadina');
+            slicice = document.getElementById('slicice');
+            polje();
+            kartice();
+        }
+        function polje(){
+            for(var i=1;i<=16;i++)
+            {
+                pozadina.innerHTML+='<div id="div'+i+'" ondrop="dropped(event)" ondragenter="usao(event)" ondragover="iznad(event)" ondragleave="izasao(event)"></div>'
+                
+            }
+            klikovi();
+        }
+        function klikovi(){
+            var elementi_za_dodelu_klika = document.querySelectorAll('#pozadina>div')
+            for(var i = 0;i<elementi_za_dodelu_klika.length;i++){
+                elementi_za_dodelu_klika[i].addEventListener("click",provera,true)
+            }
+
+        }
+        function kartice(){
+            var boja = 'blue';
+            for(var i=1;i<=8;i++)
+            {
+                if(i>7) slicice.innerHTML+='<div draggable="true" class="bela" ondragstart="uhvacen(event)" style="background-color:white"></div><div draggable="true" class="bela" ondragstart="uhvacen(event)" style="background-color:white"></div>';
+                else if(i>6) slicice.innerHTML+='<div draggable="true" class="roze" ondragstart="uhvacen(event)" style="background-color:pink"></div><div draggable="true" class="roze" ondragstart="uhvacen(event)" style="background-color:pink"></div>';
+                else if(i>5) slicice.innerHTML+='<div draggable="true" class="ljubicasta" ondragstart="uhvacen(event)" style="background-color:purple"></div><div draggable="true" class="ljubicasta" ondragstart="uhvacen(event)" style="background-color:purple"></div>';
+                else if(i>4) slicice.innerHTML+='<div draggable="true" class="narandza" ondragstart="uhvacen(event)" style="background-color:orange"></div><div draggable="true" class="narandza" ondragstart="uhvacen(event)" style="background-color:orange"></div>';
+                else if(i>3) slicice.innerHTML+='<div draggable="true" class="zuta" ondragstart="uhvacen(event)" style="background-color:yellow"></div><div draggable="true" class="zuta" ondragstart="uhvacen(event)" style="background-color:yellow"></div>';
+                else if(i>2) slicice.innerHTML+='<div draggable="true" class="zelena" ondragstart="uhvacen(event)" style="background-color:green"></div><div draggable="true" class="zelena" ondragstart="uhvacen(event)" style="background-color:green"></div>';
+                else if(i>1) slicice.innerHTML+='<div draggable="true" class="crna" ondragstart="uhvacen(event)" style="background-color:black"></div><div draggable="true" class="crna" ondragstart="uhvacen(event)" style="background-color:black"></div>';
+                else if(i==1) slicice.innerHTML+='<div draggable="true" class="plava" ondragstart="uhvacen(event)" style="background-color:blue" ></div><div draggable="true" class="plava" ondragstart="uhvacen(event)" style="background-color:blue"></div>';
+            }
+        }
+        function usao(event){
+            event.preventDefault();
+        }
+        function izasao(event){
+            event.preventDefault();
+        }
+        function iznad(event){
+            event.preventDefault();
+        }
+        function uhvacen(event){
+            element = event.target;
+            klasa = element.className;
+        }
+        function dropped(event){
+            primaoc = event.target;
+            primaoc.appendChild(element);
+            primaoc.className+=klasa;
+        }
+        function start(){
+            var ugao = 0;
+            var za_okretanje = document.querySelectorAll('#pozadina>div');
+            var slicica = document.querySelectorAll("#pozadina>div>div");
+            var timer1 = setInterval(obrni_start,10);
+            function obrni_start(){
+                ugao++;
+                if(ugao==90)
+                {
+                    for(var i = 0;i<slicica.length;i++)
+                    {
+                        slicica[i].style.backfaceVisibility = 'hidden';
+                    }
+                }
+                if(ugao==180)
+                clearInterval(timer1);
+                for(var i=0;i<za_okretanje.length;i++)
+                {
+                    za_okretanje[i].style.transform = 'rotateY('+ugao+'deg)';
+                    slicica[i].style.transform = 'rotateY('+ugao+'deg)';
+                }
+            }
+        }
+        var brojac = 0;
+        var pomoc = 0;
+        var prosli;
+        function provera(event){
+            kliknut = event.target;
+            kliknut.removeEventListener('click',provera,true)
+            pomoc++;
+            sacekaj =  obrni(kliknut,180)
+            pauza_nastavak  = setTimeout(nastavak,1810);
+            function nastavak(){
+            if(pomoc==2)
+            {
+                if(kliknut.className===prosli.className)
+                {
+                    kliknut.style.opacity = '0';
+                    prosli.style.opacity = '0';
+                    brojac++;
+                    if(brojac==8)
+                    {
+                        alert('Uspeli ste bravo !');
+                        window.location = "igramemorije.html";
+                    }
+
+                }
+                else{
+                    obrni(kliknut,0);
+                    obrni(prosli,0);
+                    kliknut.addEventListener('click',provera,true)
+                    prosli.addEventListener('click',provera,true);
+                }
+                pomoc=0;
+                prosli = '';
+            }
+            else if(pomoc==1){
+                prosli = kliknut; 
+            }
+            }
+            
+        }
+        function obrni(povratni,ugao){
+            var svi_za_klik=document.querySelectorAll('#pozadina>div');
+            for(var i = 0;i<svi_za_klik.length;i++){
+                svi_za_klik[i].removeEventListener("click",provera,true);
+            }
+            var timer = setInterval(obrtanje,10);
+            var mala = povratni.querySelector('div')
+            function obrtanje(){
+                ugao++
+                if(ugao==360)
+                {
+                    clearInterval(timer);
+                    for(var i = 0;i<svi_za_klik.length;i++){
+                        svi_za_klik[i].addEventListener("click",provera,true);
+                    }
+                    povratni.removeEventListener('click',provera,true);
+                }
+                if(ugao==180)
+                {   
+                    clearInterval(timer);
+                    for(var i = 0;i<svi_za_klik.length;i++){
+                        svi_za_klik[i].addEventListener("click",provera,true);
+                    }
+                    povratni.removeEventListener('click',provera,true);
+                    clearInterval(timer);
+                } 
+                povratni.style.transform= 'rotateY('+ugao+'deg)';
+                mala.style.transform= 'rotateY('+ugao+'deg)';
+            }
+        }
+
+        addEventListener('load',postavi)
+
+    </script>
+</body>
+</html>
