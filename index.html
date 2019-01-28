@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Title</title>
     <style>
         *{
@@ -15,6 +16,7 @@
             }
             #slicice{
                 width: 90%!important;
+                display: none!important;
             }
             #komande{
                 width: 90%!important;
@@ -68,21 +70,95 @@
             width: 21%;
             height: 8vh;
         }
+        input{
+            text-align: center;
+            font-weight: bold;
+
+        }
     </style>
 </head>
 <body>
     <div id="pozadina"></div>
     <div id="komande">
-        <button id="random">RANDOM</button>
+        <button id="random" onclick="random()">RANDOM</button>
+        <input type="text" id="vreme" readonly>
         <button id="start" onclick="start()">START</button>
     </div>
     <div id="slicice"></div>
     <script>
+        var startprovera = 0;
+        var brojacprebacenih = 0;
+        var randomprovera = 0;
         function postavi(){
-            var pozadina = document.getElementById('pozadina');
+            pozadina = document.getElementById('pozadina');
             slicice = document.getElementById('slicice');
             polje();
             kartice();
+            alert("Ukoliko ste na racunaru mozete prevlacenjem postaviti kartice na odredjeno mesto. Ako ste na mobilnom ili zelite random razmestene kartice stisnite random. Nakon postavljanja kartica pritisnite start")
+        }
+        function start(){
+            if(startprovera == 1){
+                document.getElementById('start').onclick='';
+                var ugao = 0;
+                var za_okretanje = document.querySelectorAll('#pozadina>div');
+                var slicica = document.querySelectorAll("#pozadina>div>div");
+                var timer1 = setInterval(obrni_start,10);
+                function obrni_start(){
+                    ugao++;
+                    if(ugao==90)
+                    {
+                        for(var i = 0;i<slicica.length;i++)
+                        {
+                            slicica[i].style.backfaceVisibility = 'hidden';
+                        }
+                    }
+                    if(ugao==180)
+                    {
+                        clearInterval(timer1);
+                        klikovi();
+                    }
+
+                    for(var i=0;i<za_okretanje.length;i++)
+                    {
+                        za_okretanje[i].style.transform = 'rotateY('+ugao+'deg)';
+                        slicica[i].style.transform = 'rotateY('+ugao+'deg)';
+                    }
+                }
+                vreme();
+            }
+        }
+        function random(){
+            if(randomprovera==0)
+            {
+                var slikice = document.querySelectorAll('#slicice>div');
+                var pamti_niz = [];
+                var proveri = 0;
+                for(var i = 0;i<slikice.length;i++)
+                {
+                    while(1)
+                    {
+                        var randombroj = Math.floor(Math.random()*16)+1;
+                        for(var j = 0;j<pamti_niz.length;j++)
+                        {
+                            if(pamti_niz[j]== randombroj)
+                            {
+                                proveri = 1;
+                            }
+                        }
+                        if(proveri==0)
+                        {
+                            var odredjeni = document.getElementById('div'+randombroj);
+                            pamti_niz.push(randombroj);
+                            odredjeni.appendChild(slikice[i]);
+                            odredjeni.className=slikice[i].className;
+                            break;
+                        }
+                        if(proveri==1) proveri = 0;
+                    }
+                }
+                startprovera = 1;
+                randomprovera = 1;
+            }
         }
         function polje(){
             for(var i=1;i<=16;i++)
@@ -90,7 +166,6 @@
                 pozadina.innerHTML+='<div id="div'+i+'" ondrop="dropped(event)" ondragenter="usao(event)" ondragover="iznad(event)" ondragleave="izasao(event)"></div>'
                 
             }
-            klikovi();
         }
         function klikovi(){
             var elementi_za_dodelu_klika = document.querySelectorAll('#pozadina>div')
@@ -130,29 +205,10 @@
             primaoc = event.target;
             primaoc.appendChild(element);
             primaoc.className+=klasa;
-        }
-        function start(){
-            var ugao = 0;
-            var za_okretanje = document.querySelectorAll('#pozadina>div');
-            var slicica = document.querySelectorAll("#pozadina>div>div");
-            var timer1 = setInterval(obrni_start,10);
-            function obrni_start(){
-                ugao++;
-                if(ugao==90)
-                {
-                    for(var i = 0;i<slicica.length;i++)
-                    {
-                        slicica[i].style.backfaceVisibility = 'hidden';
-                    }
-                }
-                if(ugao==180)
-                clearInterval(timer1);
-                for(var i=0;i<za_okretanje.length;i++)
-                {
-                    za_okretanje[i].style.transform = 'rotateY('+ugao+'deg)';
-                    slicica[i].style.transform = 'rotateY('+ugao+'deg)';
-                }
-            }
+            primaoc.ondrop= '';
+            brojacprebacenih++;
+            if(brojacprebacenih==16) startprovera = 1;
+            randomprovera = 1;
         }
         var brojac = 0;
         var pomoc = 0;
@@ -161,8 +217,8 @@
             kliknut = event.target;
             kliknut.removeEventListener('click',provera,true)
             pomoc++;
-            sacekaj =  obrni(kliknut,180)
-            pauza_nastavak  = setTimeout(nastavak,1810);
+            obrni(kliknut,180)
+            pauza_nastavak  = setTimeout(nastavak,905);
             function nastavak(){
             if(pomoc==2)
             {
@@ -173,16 +229,15 @@
                     brojac++;
                     if(brojac==8)
                     {
-                        alert('Uspeli ste bravo !');
-                        window.location = "igramemorije.html";
+                        clearInterval(timer3);
+                        alert('Uspeli ste bravo !\nVase vreme je: '+vremet+'');
+                        window.location = "index.html";
                     }
 
                 }
                 else{
                     obrni(kliknut,0);
                     obrni(prosli,0);
-                    kliknut.addEventListener('click',provera,true)
-                    prosli.addEventListener('click',provera,true);
                 }
                 pomoc=0;
                 prosli = '';
@@ -198,7 +253,7 @@
             for(var i = 0;i<svi_za_klik.length;i++){
                 svi_za_klik[i].removeEventListener("click",provera,true);
             }
-            var timer = setInterval(obrtanje,10);
+            var timer = setInterval(obrtanje,5);
             var mala = povratni.querySelector('div')
             function obrtanje(){
                 ugao++
@@ -216,13 +271,23 @@
                     for(var i = 0;i<svi_za_klik.length;i++){
                         svi_za_klik[i].addEventListener("click",provera,true);
                     }
-                    povratni.removeEventListener('click',provera,true);
+                    povratni.addEventListener('click',provera,true);
                     clearInterval(timer);
                 } 
                 povratni.style.transform= 'rotateY('+ugao+'deg)';
                 mala.style.transform= 'rotateY('+ugao+'deg)';
             }
         }
+        function vreme(){
+            vremet = 0;
+            timer3 = setInterval(broji,1000)
+            function broji(){
+                vremeispis= document.getElementById('vreme');
+                vremeispis.value = vremet;
+                vremet++;
+            }
+        }
+
 
         addEventListener('load',postavi)
 
