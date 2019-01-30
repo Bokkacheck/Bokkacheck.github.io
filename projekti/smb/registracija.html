@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Ovo je stranica na kojoj se nalaze informacije o mogucnosti usluzne registracije
+     vozila musterije. Stranica sadrzi i kalkulator iznosa cene registracije">
+    <meta name="keywords" content="SMB CARS registracija usluzna usluga tehnicki pregled kalkulator cena">
+    <meta name="author" content="Bojan Stojković, bokis97@live.com">
+    
+    <title>SMB CARS</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="m icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="full-width">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">POČETNA <span class="sr-only">(current)</span></a></li>
+                        <li><a href="onama.html">O NAMA</a></li>
+                        <li><a href="galerija.html">GALERIJA</a></li>
+                        <li><a href="ponuda.html">PONUDA VOZILA</a></li>
+                        <li><a href="probnavoznja.html">PROBNA VOŽNJA</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">Usluge <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="registracija.html">Registracija</a></li>
+                                <li><a href="zamena.html">Zamena staro za novo</a></li>
+                                <li><a href="servis.html">Servis i održavanje</a></li>
+                                <li><a href="popravka.html">Popravka vozila</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="download/cenovnik.pdf">Cenovnik usluga</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="kontakt.html">KONTAKT</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+    <section id="registracija">
+        <div class="container-fluid">
+            <div class="panel">
+                <div class="panel-header">
+                    <h1 class="text-center iskoseno">Registrujte vaše vozilo kod nas</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <p>
+                                Mi ćemo registrovati vaš automobil umesto vas, sve što je potrebno je da nam dovezete
+                                automobil i date saobraćajnu dozvolu.
+                                Sarađujemo sa puno siguravajućih društva tako da budite sigurni da ćemo pronaći
+                                najisplatljivije rešenje za vas. Tehnički pregled
+                                obavljaju naši iskusni majstori, sve se detaljno provera radi sigurne i bezbedne
+                                vožnje. Ukoliko ustanovimo na tehničkom pregledu da
+                                vozilo ima neki kvar odmah ćemo vam javiti kako bi ste mogli blagovremeno da reagujete.
+                                Ovaj vid usluge mogu koristiti isključivo mušterije
+                                čija su vozila registrovana u Beogradu.
+                            </p>
+                            <p>
+                                Dalje, na ovoj strani nalazi se kalkulator cene registracije. Dobijeni iznos je
+                                informativnog karaktera, za detaljne informacije kontaktirajte nas.
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <img class="img-responsive" src="images/registracija.png" alt="registracija slika">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="panel">
+                <div class="panel-title">
+                    <h2 class="text-center iskoseno">
+                        Kalkulator registracije
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="godiste">Unesite godište vozila</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input class="form-control" id="godiste" type="number" min="1980" max="2019">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="kubikaza">Unesite kubikažu vozila (u cm3)</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input class="form-control" id="kubikaza" type="number" min="600" max="6000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="snaga">Unesite snagu motora (u KS)</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input class="form-control" id="snaga" type="number" min="30" max="1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="gorivo">Tip goriva</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <select class="form-control" name="gorivo" id="gorivo">
+                                        <option value="1">Benzin+Gas</option>
+                                        <option value="2">Benzin</option>
+                                        <option value="3">Dizel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="stepen">Unesite premijski stepen</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input class="form-control" id="stepen" type="number" min="0" max="10" value="4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Da li vam je ovo prva registracija?</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input id="radioda" type="radio" value="1" name="radio" required>
+                                    <label for="radioda">Da</label> &nbsp;
+                                    <input id="radione" type="radio" value="0" name="radio" checked>
+                                    <label for="radione">Ne</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="rezultat">Cena registracije je</label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input class="form-control" id="rezultat" type="text" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-4">
+                                    <input class="form-control btn" type="button" value="Izračunaj" onclick="racunaj()">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function racunaj() {
+            var snaga = document.getElementById('snaga');
+            var kubikaza = document.getElementById('kubikaza');
+            var stepen = document.getElementById('stepen');
+            var prva = document.getElementById('radioda');
+            var gorivo = document.getElementById('gorivo');
+            var godiste = document.getElementById('godiste');
+            var rezultat = document.getElementById('rezultat');
+            var zbir = 0;
+            var tehnicki = 3000;
+            var troskovi = 5000;
+            var usluga = 2000;
+            var provera
+
+            if (snaga.checkValidity() == false || snaga.value == '') {
+                alert("Snaga mora biti izmedju 30 i 1000 i mora biti broj");
+                snaga.value = '';
+                provera = 1;
+            }
+            if (kubikaza.checkValidity() == false || kubikaza.value == '') {
+                alert("Kubikaža mora biti između 600 i 6000 i mora biti broj");
+                kubikaza.value = '';
+                provera = 1;
+            }
+            if (stepen.checkValidity() == false || stepen.value == '') {
+                alert("Stepen mora biti izmedju 0 i 10 i mora biti broj");
+                stepen.value = '';
+                provera = 1;
+            }
+            if (godiste.checkValidity() == false || godiste.value == '') {
+                alert("Godište mora biti izmedju 1980 i 2019 i mora biti broj");
+                godiste.value = '';
+                provera = 1;
+            }
+
+            if (provera != 1) {
+                if (prva.checked == true) {
+                    stepen.value = 4
+                    zbir += 3500
+                }
+                zbir += parseInt(kubikaza.value * 8) + parseInt(snaga.value * 70) - parseInt(stepen.value * 300) - parseInt(2019 - godiste.value) * 200 + tehnicki + troskovi + usluga;
+                if (kubikaza.value > 2100) zbir = parseInt(zbir * 1.6);
+                else if (kubikaza.value <= 2100 && kubikaza.value > 1600) zbir = parseInt(zbir * 1.05);
+                else if (kubikaza.value <= 1600 && kubikaza.value > 1150) zbir = parseInt(zbir * 1);
+                else if (kubikaza.value <= 1150) zbir = parseInt(zbir * 0.6);
+                if (gorivo.value == 1) zbir -= 1000;
+                else if (gorivo.value == 3) zbir += 1000;
+                rezultat.value = zbir;
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="text-center">&copy; Bojan Stojković <br> NRT-4/17</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="index.html">POCETNA</a></li>
+                        <li><a href="kontakt.html">KONTAKT</a></li>
+                        <li><a href="mapasajta.html">MAPA SAJTA</a></li>
+                        <li><a href="faq.html">ČESTA PITANJA</a></li>
+                    </ul>
+                    <p>
+                        <a href="mailto:smbcars@hotmail.com">smbcars@hotmail.com&nbsp;</a>
+                        <a class="text-nowrap" href="tel:+11-2471-099">&nbsp;011/1234-567</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <p class="lead text-center">
+                        <a href="https://www.instagram.com/bokis97/?hl=sr"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/boki.ktz"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/user/bojankotezanac97/featured"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

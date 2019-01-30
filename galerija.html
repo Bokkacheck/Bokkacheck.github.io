@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Galerija</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galerija strana koja sadrzi neke moje slike">
+    <meta name="keywords" content="galerija slike images portfolio biografija cv">
+    <meta name="author" content="Bojan Stojković, bokis97@live.com">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stil.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <script src="javascript/js1.js"></script>
+</head>
+
+<body onload="navigacija()" style="position: relative;">
+    <video src="images/videopozadina.mp4" autoplay loop muted id="video-pozadina"></video>
+
+    <nav>
+        <div class="ime centriraj">
+            <a href="index.html" id="ispis"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="biografija.html">Biografija</a></li>
+            <li class="aktivna"><a href="galerija.html">Galerija</a></li>
+            <li><a href="projekti.html">Projekti</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div id="galerija_prikaz">
+        <div class="izlaz krug" onclick="zatvori()">X</div>
+        <div class="izlaz krug drugi" onclick="zatvori()">X</div>
+        <div class="row center centriraj">
+            <div class="flex-cetvrtina strelice vertikalni-centar" onclick="prethodna()">&blacktriangleleft;</div>
+            <div class="flex-pola centriraj">
+                <img id="velika_slika" class="slika" src="" alt="slika u galeriji">
+            </div>
+            <div class="flex-cetvrtina strelice vertikalni-centar" onclick="sledeca()">&blacktriangleright;</div>
+            <div class="row center centriraj">
+                <div class="smanji25 strelice2" onclick="prethodna()" style="text-align:right">&blacktriangleleft;</div>
+                <div id="brojslike" class="centriraj" style="width:50%!important">1/12</div>
+                <div class="smanji25 strelice2" onclick="sledeca()" style="text-align:left">&blacktriangleright;</div>
+            </div>
+            <div class="row">
+                <div class="flex1-12">
+                    <img id="s1" class="slika" src="images/galerija/1.jpg" onclick="promeni(1)" alt="1">
+                </div>
+                <div class="flex1-12">
+                    <img id="s2" class="slika" src="images/galerija/2.jpg" onclick="promeni(2)" alt="2">
+                </div>
+                <div class="flex1-12">
+                    <img id="s3" class="slika" src="images/galerija/3.jpg" onclick="promeni(3)" alt="3">
+                </div>
+                <div class="flex1-12">
+                    <img id="s4" class="slika" src="images/galerija/4.jpg" onclick="promeni(4)" alt="4">
+                </div>
+                <div class="flex1-12">
+                    <img id="s5" class="slika" src="images/galerija/5.jpg" onclick="promeni(5)" alt="5">
+                </div>
+                <div class="flex1-12">
+                    <img id="s6" class="slika" src="images/galerija/6.jpg" onclick="promeni(6)" alt="6">
+                </div>
+                <div class="flex1-12">
+                    <img id="s7" class="slika" src="images/galerija/7.jpg" onclick="promeni(7)" alt="7">
+                </div>
+                <div class="flex1-12">
+                    <img id="s8" class="slika" src="images/galerija/8.jpg" onclick="promeni(8)" alt="8">
+                </div>
+                <div class="flex1-12">
+                    <img id="s9" class="slika" src="images/galerija/9.jpg" onclick="promeni(9)" alt="9">
+                </div>
+                <div class="flex1-12">
+                    <img id="s10" class="slika" src="images/galerija/10.jpg" onclick="promeni(10)" alt="10">
+                </div>
+                <div class="flex1-12">
+                    <img id="s11" class="slika" src="images/galerija/11.jpg" onclick="promeni(11)" alt="11">
+                </div>
+                <div class="flex1-12">
+                    <img id="s12" class="slika" src="images/galerija/12.jpg" onclick="promeni(12)" alt="12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="galerija">
+        <div class="row space-around siva radius">
+            <h1 class="flex-ceo iskoseno centriraj">Galerija</h1>
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/1.jpg" alt="slika 1" onclick="otvori(1)">
+            </div>
+            <div class="flex-cetvrtina  radius">
+                <img class="slika radius" src="images/galerija/2.jpg" alt="slika 2" onclick="otvori(2)">
+            </div>
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/3.jpg" alt="slika 3" onclick="otvori(3)">
+            </div>
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/4.jpg" alt="slika 4" onclick="otvori(4)">
+            </div>
+        </div>
+        <div class="row space-around siva radius">
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/5.jpg" alt="slika 5" onclick="otvori(5)">
+            </div>
+            <div class="flex-cetvrtina  radius">
+                <img class="slika radius" src="images/galerija/6.jpg" alt="slika 6" onclick="otvori(6)">
+            </div>
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/7.jpg" alt="slika 7" onclick="otvori(7)">
+            </div>
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/8.jpg" alt="slika 8" onclick="otvori(8)">
+            </div>
+        </div>
+        <div class="row space-around siva radius">
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/9.jpg" alt="slika 9" onclick="otvori(9)">
+            </div>
+            <div class="flex-cetvrtina  radius">
+                <img class="slika radius" src="images/galerija/10.jpg" alt="slika 10" onclick="otvori(10)">
+            </div>
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/11.jpg" alt="slika 11" onclick="otvori(11)">
+            </div>
+            <div class="flex-cetvrtina radius">
+                <img class="slika radius" src="images/galerija/12.jpg" alt="slika 12" onclick="otvori(12)">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer row space-around centriraj">
+            <div class="flex-cetvrtina flexpomoc">
+                <div>&copy;Bojan Stojkovic NRT-4/17 </div>
+                <div><a href="mailto:bokis97@live.com">bokis97@live.com</a></div>
+            </div>
+            <div class="flex-pola radius">
+                <ul>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="projekti/smb/index.html">SMB-CARS</a></li>
+                    <li><a href="projekti/zmijice.html">Zmijice</a></li>
+                    <li><a href="https://www.viser.edu.rs/">Visoka škola elektrotehnike i računarstva</a></li>
+                </ul>
+            </div>
+            <div class="flex-cetvrtina ">
+                <ul>
+                    <li><a href="https://www.facebook.com/boki.ktz"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/bokis97/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/bojankotezanac97"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

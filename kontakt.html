@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kontakt strana koja sadrzi moje kontakt informacije i mogucnost da me kontaktiraju">
+    <meta name="keywords" content="kontakt informacije poruka pitaj mapa adresa email">
+    <meta name="author" content="Bojan Stojković, bokis97@live.com">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stil.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <script src="javascript/js1.js"></script>
+</head>
+
+<body onload="navigacija()">
+    <video src="images/videopozadina.mp4" preload="metadata" autoplay loop muted id="video-pozadina"></video>
+
+    <nav>
+        <div class="ime centriraj">
+            <a href="index.html" id="ispis"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="biografija.html">Biografija</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="projekti.html">Projekti</a></li>
+            <li class="aktivna"><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section id="kontakt">
+        <div class="row space-around siva radius">
+            <h1 class="flex-ceo iskoseno centriraj">Kontakt</h1>
+            <div class="flex-pola">
+                <img class="slika radius" src="images/kontakt.jpg" alt="kontakt">
+            </div>
+            <ul class="flex-pola flexpomoc iskoseno">
+                <li><span><i class="fas fa-address-card"></i> Adresa: </span><span> Slavka Kolara 8/3</span></li>
+                <li><span><i class="fas fa-phone"></i> Telefon: </span><span> 064/3000/112</span></li>
+                <li><span><i class="fas fa-at"></i> E-mail: </span><span><a href="mailto:bokis97@live.com"> bokis97@live.com</a></span></li>
+                <li><span><i class="fab fa-facebook-f"></i> Facebook: </span><span><a href="https://www.facebook.com/boki.ktz" target="blank">klikni</a></span></li>
+                <li><span><i class="fab fa-instagram"></i> Instagram: </span><span><a href="https://www.instagram.com/bokis97/" target="blank">klikni</a></span></li>
+            </ul>
+            <div class="row space-around">
+                <div class="flex-ceo centriraj tamno-siva radius max iskoseno">
+                    Imate pitanja ili želite da predložite nešto ? <br>
+                    Kontaktirajte me putem sledeće forme. <br>
+                    &blacktriangledown;
+                </div>
+            </div>
+            <div class="row space-around centriraj">
+                <div class="flex-pola">
+                <form id="forma">
+                    <label class="iskoseno" for="ime" style="margin-top:0px">Ime i prezime: </label>
+                    <input type="text" name="" id="ime" placeholder="Unesite vase ime.">
+                    <label for="mail">E-mail: </label>
+                    <input type="text" id="mail" placeholder="Unesite vaš e-mail.">
+                    <label for="poruka">Vaša poruka: </label>
+                    <textarea placeholder="Upišite vašu poruku" name="" id="poruka" cols="30" rows="10"></textarea>
+                    <label for="covek">Da li ste čovek?</label>
+                    <input type="checkbox" name="" id="covek" onchange="k_provera()">
+                    <div class="flex-ceo" style="position:relative">
+                        <div id="robot">
+                            Unesite rezultat <span id="sabirak1"></span> + <span id="sabirak2"></span> =
+                            <input type="text" id="rezultat">
+                            <button id="proveri" onclick="return unesi()" formnovalidate>Proveri</button>
+                        </div>
+                    </div>
+                </form>
+                <button class="klik iskoseno" id="posalji" onclick="return posalji()">Pošalji</button>
+            </div>
+                <iframe class="flex-trecina" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.5517346434212!2d20.466375215844643!3d44.85106157909856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a64d01b873367%3A0x6690950dd30322e0!2z0KHQu9Cw0LLQutCwINCa0L7Qu9Cw0YDQsCA4LCDQkdC10L7Qs9GA0LDQtA!5e0!3m2!1ssr!2srs!4v1548274869350" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer row space-around centriraj">
+            <div class="flex-cetvrtina flexpomoc">
+                <div>&copy;Bojan Stojkovic NRT-4/17 </div>
+                <div><a href="mailto:bokis97@live.com">bokis97@live.com</a></div>
+            </div>
+            <div class="flex-pola radius">
+                <ul>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="projekti/smb/index.html">SMB-CARS</a></li>
+                    <li><a href="projekti/zmijice.html">Zmijice</a></li>
+                    <li><a href="https://www.viser.edu.rs/">Visoka škola elektrotehnike i računarstva</a></li>
+                </ul>
+            </div>
+            <div class="flex-cetvrtina ">
+                <ul>
+                    <li><a href="https://www.facebook.com/boki.ktz"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/bokis97/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/bojankotezanac97"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

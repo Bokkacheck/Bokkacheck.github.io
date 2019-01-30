@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .sirina{
+            width: 100%;
+        }
+        .pozadina{
+            background-color: lightslategrey;
+            width: 700px;
+            height: 550px;
+            margin: 30px auto;  
+            padding-top: 10px;  
+        }
+        #polje{
+            height: 450px;
+            width: 500px;
+            margin: 10px auto;
+            background-color: black;
+            position: relative;
+        }
+        button{
+            width: 110px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+            font: 20px bold arial;
+            margin-left:10px;
+        }
+        #zmija{
+            background-color: red;
+            position: relative;
+            top: 150px;
+            left: 150px;
+        }
+        #glavna{
+            width: 23px;
+            height: 23px;
+            border-radius: 35%;
+            background-color: orange;
+            border: 2px dashed greenyellow;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            z-index: 9999;
+        }
+        #vreme{
+            color: white;
+            font: 20px bold Arial;
+            position: relative;
+            left:20px;
+            top: -1280px;
+            width: 100px;
+        }
+        #bodovi{
+            color: white;
+            font: 20px bold Arial;
+            position: relative;
+            left:615px;
+            top: -1355px;
+            width: 100px;
+        }
+        #bodoviv,#vremev{
+            text-align: center;
+            font: 25px bold arial;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #hrana{
+            height: 450px;
+            width: 500px;
+            margin: 10px auto;
+            position: relative;
+            top: -922px;
+            border: 1px solid white;
+            z-index: 99;
+        }
+        #delovi{
+            height: 450px;
+            width: 500px;
+            margin: 10px auto;
+            position: relative;
+            top: -460px;
+            border: 1px solid white;
+        }
+        #kraj{
+            width: 300px;
+            height: 200px;
+            background-color: gray;
+            color: white;
+            z-index: -1;
+            margin: 0 auto;
+            position: relative;
+            opacity: .8;
+            font-size: 20px;
+        }
+        .kontrole{
+            width: 450px;
+            margin: 10px auto;
+            position: relative;
+            top:-915px;
+            
+        }
+        .komande{
+            position: absolute;
+            width: 700px;
+            height: 270px;
+            background-color: lightslategray;
+            margin: 20px auto;
+            top: 600px;
+
+        }
+        #w,#a,#s,#d{
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            border:2px solid grey;
+            border-radius: 50%;
+            font : 70px bold Arial;
+        }
+        #w{
+            top: 10px;
+            left: 290px;
+            background-color: blue
+        }
+        #s{
+            top: 150px;
+            left:   290px;
+            background-color: blue
+        }
+        #d{
+            top: 80px;
+            left: 430px;
+            background-color: red
+        }
+        #a{
+            top: 80px;
+            left: 150px;
+            background-color: red
+        }
+    
+
+        
+    </style>
+</head>
+<body>
+    <div class="sirina">
+    <div class="pozadina">
+        <div id="polje">
+                <div id="glavna"></div>
+        </div>
+        <div id="delovi"></div>
+        <div id="hrana"></div>
+        <div class="kontrole">
+            <input type="number" id="pomeraj">
+            <button id="pocni" onclick="pocni()">POCNI</button>
+            <button id="reset"><a href="snake.html">RESET</a></button>
+        </div>
+        <p id="vreme">Vreme:<br><span id="vremev"></span></p>
+        <p id="bodovi">Bodovi:<br><span id="bodoviv"></span></p>
+        <div class="komande">
+            <button id="w" onclick="dugme(119)">&uarr;</button>
+            <button id="a" onclick="dugme(97)">&larr;</button>
+            <button id="s" onclick="dugme(115)">&darr;</button>
+            <button id="d" onclick="dugme(100)">&rarr;</button>
+        </div>
+    </div>
+    <div id="kraj"></div>
+    </div>
+
+    <script>
+        var i,j,smery=0,smerx=0;
+        var pomocx,pomocy,brdelova=0,jelo=1;
+        var delovi = document.getElementById('delovi');
+        var pamtix = new Int32Array(100);
+        var pamtiy = new Int32Array(100);
+        window.addEventListener("keypress", tastatura,false);
+        function tastatura(key) {
+            var x = key.keyCode;
+            if(x=='119')
+            {
+                if(smery!=-1)
+                smery=1;
+                smerx=0;
+            }
+            else if(x=='115')
+            {
+                if(smery!=1)
+                smery=-1;
+                smerx=0;
+            }
+            else if(x=='100')
+            {
+                if(smerx!=-1)
+                smerx=1;
+                smery=0;
+            }
+            else if(x=='97')
+            {
+                if(smerx!=1)
+                smerx=-1;
+                smery=0;
+            }
+        }
+        function dugme(slovo)
+        {
+            if(slovo==119)
+            {
+                if(smery!=-1)
+                smery=1;
+                smerx=0;
+            }
+            else if(slovo==115)
+            {
+                if(smery!=1)
+                smery=-1;
+                smerx=0;
+            }
+            else if(slovo==100)
+            {
+                if(smerx!=-1)
+                smerx=1;
+                smery=0;
+            }
+            else if(slovo==97)
+            {
+                if(smerx!=1)
+                smerx=-1;
+                smery=0;
+            }
+        }
+
+        function pocni()
+        {
+            var jelox,jeloy,brojac=0;provera=0,pozx=150,pozy=150,vreme=0;
+            var vremev = document.getElementById('vremev');
+            var hrana = document.getElementById('hrana');
+            var pomeraj = parseInt(document.getElementById('pomeraj').value);
+            var pozx=150,pozy=150,vreme,bodovi=0,i,j;
+            var rezultat = document.getElementById('bodoviv')
+            var zmija = document.getElementById('glavna');
+            alert('Odabrana je brzina : '+pomeraj);
+            var timer = setInterval(igra, 100);
+            function igra(){
+            if(smery==-1&&pomocy!=1){
+                pozy+=pomeraj;
+            }
+            if(smery==1&&pomocy!=-1){
+                pozy-=pomeraj;
+            }
+            if(smerx==1&&pomocx!=-1){
+                pozx+=pomeraj;
+            }
+            if(smerx==-1&&pomocx!=1){
+                pozx-=pomeraj;
+            }
+            zmija.style.left=pozx+'px';
+            zmija.style.top=pozy+'px';
+            if(pozy>420) pozy=10;
+            if(pozx>470) pozx=10;
+            if(pozy<10) pozy=420;
+            if(pozx<10) pozx=470;
+            jelo++;
+            if(jelo%70==0)
+            {
+                jelox=Math.floor(Math.random()*400);
+                jeloy=Math.floor(Math.random()*400);
+                hrana.innerHTML='<div id="jelo" style="width:20px; height:20px; background-color: red; position:absolute; left:'+jelox+'px; top:'+jeloy+'px; z-index=9999;"></div>'
+
+            }
+            if(Math.abs(jeloy-pozy)<10&&Math.abs(jelox-pozx)<10)
+            {
+                hrana.innerHTML="";
+                bodovi+=10;
+                rezultat.innerHTML=""+bodovi;
+                jelox=-200;
+                jeloy=-200;
+                jelo=69;
+                brdelova++;
+                delovi.innerHTML+='<div id="z'+brdelova+'"></div>'
+                provera=1;
+            }
+            for(i=0;i<=brdelova;i++)
+            {
+                if(pozx==pamtix[i+2]&&pozy==pamtiy[i+2])
+                {
+                    var kraj = document.getElementById('kraj');
+                    kraj.innerHTML+="Udarili ste u svoje telo, kraj igre,<br>Osvojeni broj bodova je: "+bodovi+'<br>Utroseno vreme je: '+vreme/10;
+                    kraj.style.top = '-550px';
+                    kraj.style.zIndex='999999';
+                    clearInterval(timer);
+                }
+
+            }
+            if(provera!=0)
+            {
+            brojac++
+            pamtix[brojac]=parseInt(pozx);
+            pamtiy[brojac]=parseInt(pozy);
+            if(brojac==brdelova) brojac=0;
+            }
+            for(i=1;i<=brdelova;i++)
+            {
+                deo = document.getElementById('z'+i);
+                deo.style.position='absolute';
+                deo.style.top=pamtiy[i]+'px';
+                deo.style.left=pamtix[i]+'px';
+                deo.style.width=20+'px';
+                deo.style.height=20+'px';
+                deo.style.zIndex=999;
+                if(i%6==1)
+                {
+                deo.style.backgroundColor='green';
+                }
+                else if(i%6==3)
+                {
+                deo.style.backgroundColor='yellow';
+                }
+                else if(i%6==5)
+                {
+                deo.style.backgroundColor='blue';
+                }
+                else
+                {
+                    deo.style.backgroundColor='red';
+                }
+                delete deo;
+
+            }
+            vreme++;
+            if(vreme%10==0)
+            var vremeee= vreme/10
+            vremev.innerHTML=''+(vreme/10);
+            }
+            
+        }
+    </script>
+</body>
+</html>

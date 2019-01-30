@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Početna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pocetna strana koja ukratko daje pregled sadrzaja i daje dobrodoslicu">
+    <meta name="keywords" content="Bojan Stojkovic dizajn programiranje portfolio biografija cv">
+    <meta name="author" content="Bojan Stojković, bokis97@live.com">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stil.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <script src="javascript/js1.js"></script>
+</head>
+
+<body onload="pocetak()">
+    <video src="images/videopozadina.mp4" autoplay loop muted id="video-pozadina"></video>
+
+    <nav>
+        <div class="ime centriraj">
+            <a href="index.html" id="ispis"></a>
+        </div>
+        <ul>
+            <li class="aktivna"><a href="index.html">Početna</a></li>
+            <li><a href="biografija.html">Biografija</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="projekti.html">Projekti</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="row space-around siva flexreverse radius">
+        <div class="flex-cetvrtina smanji">
+            <img class="slika radius" src="images/pocetnaslika.png" alt="pocetna slika">
+        </div>
+        <div class="flex-dvetrecine centriraj flexpomoc ">
+            <h1>Dobrodošli na moj sajt</h1>
+            <p>Ovde možete saznati neke stvari o meni, videti moje iskustvo u radu, moju biografiju, hobije i
+                interesovanja.</p>
+            <p>Možete pogledati moje dosadašnje projekte.</p>
+        </div>
+    </div>
+    <div class="row center tamno-siva radius">
+        <div class="flex-ceo">
+            <p class="max iskoseno centriraj" id="kontaktiraj">Imate poslovni predlog?</p>
+        </div>
+    </div>
+    <div class="row space-around jednaki">
+        <div class="flex-trecina">
+            <div class="row center centriraj siva radius">
+                <h3>O meni</h3>
+                <div class="flex-ceo">
+                    Ako želite da znate više o meni na pravom ste mestu.
+                </div>
+                <div class="flex-ceo">
+                    <img class="slika" src="images/omeni.jpg" alt="slika o meni">
+                </div>
+                <div class="flex-polovina">
+                    <a class="klik" href="biografija.html">Vidi više.</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-trecina">
+            <div class="row center centriraj siva radius">
+                <h3>Radno iskustvo</h3>
+                <div class="flex-ceo">
+                    Radno iskustvo nije veliko ali postoji, pogledaj moje poslove.
+                </div>
+                <div class="flex-ceo">
+                    <img class="slika" src="images/posao1.jpg" alt="splajser">
+                </div>
+                <div class="flex-polovina">
+                    <a class="klik" href="biografija.html#radnoiskustvo">Više o ovome.</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-trecina">
+            <div class="row center centriraj siva radius">
+                <h3>Moji projekti</h1>
+                    <div class="flex-ceo">
+                        Imam par projekta iza sebe, početnik sam ali se trudim.
+                    </div>
+                    <div class="flex-ceo">
+                        <img class="slika" src="images/projekti1.png" alt="moji projekti">
+                    </div>
+                    <div class="flex-polovina">
+                        <a class="klik" href="projekti.html">Pogledaj projekte.</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <section id="vestine">
+        <div class="row space-around">
+            <div class="flex-trecina">
+                <img class="slika krug" src="images/mojskil.png" alt="vestine">
+            </div>
+            <div class="flex-pola tamno-siva radius">
+                <div class="row space-around">
+                    <h3 class="flex-ceo centriraj">Veštine</h3>
+                    <div class="flex-cetvrtina centriraj">
+                        C/C++
+                    </div>
+                    <div class="flex-dvetrecine">
+                        <div class="pun">
+                            <div class="popunjen" id="jedan"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row space-around">
+                    <div class="flex-cetvrtina centriraj">
+                        JavaScript
+                    </div>
+                    <div class="flex-dvetrecine">
+                        <div class="pun">
+                            <div class="popunjen" id="dva"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row space-around">
+                    <div class="flex-cetvrtina centriraj">
+                        HTML/CSS
+                    </div>
+                    <div class="flex-dvetrecine">
+                        <div class="pun">
+                            <div class="popunjen" id="tri"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer row space-around centriraj">
+            <div class="flex-cetvrtina flexpomoc">
+                <div>&copy;Bojan Stojkovic NRT-4/17 </div>
+                <div><a href="mailto:bokis97@live.com">bokis97@live.com</a></div>
+            </div>
+            <div class="flex-pola radius">
+                <ul>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="projekti/smb/index.html">SMB-CARS</a></li>
+                    <li><a href="projekti/zmijice.html">Zmijice</a></li>
+                    <li><a href="https://www.viser.edu.rs/">Visoka škola elektrotehnike i računarstva</a></li>
+                </ul>
+            </div>
+            <div class="flex-cetvrtina ">
+                <ul>
+                    <li><a href="https://www.facebook.com/boki.ktz"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/bokis97/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/bojankotezanac97"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

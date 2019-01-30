@@ -1,0 +1,291 @@
+body{
+    background-color: lightgray;
+}
+.navbar{
+    background-color: darkslategray;
+    padding: 5px;
+    border:none;
+    border-radius: 0px;
+}
+.navbar-brand {   
+    padding: 0 1em;
+}
+.navbar-default .navbar-nav>li>a{
+    text-transform: uppercase;
+    color: white;
+    font: 1.2em bold arial;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: grey;
+}
+.navbar-default .navbar-nav>.active> a, 
+.navbar-default .navbar-nav>.active> a:focus, 
+.navbar-default .navbar-nav>.active> a:hover {
+
+    text-transform: uppercase;
+    color: black;
+    border-radius: 5em;
+    font-style: italic;
+}
+.dropdown-menu > li > a:hover {
+    transition: 0.2s;
+    background-color: darkslategray;
+    color: white;
+}
+.dropdown-menu .active a{ 
+    background-color: #e7e7e7 !important;
+    color: black!important;
+    border-radius: 5em;
+}
+.dropdown-toggle{
+    border-radius: 5em!important;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus{
+  color: black!important;
+}
+.jumbotron img{
+    transition: 1s;
+}
+.jumbotron img:hover{
+    transform: scale(1.2,1.2) rotate(-10deg);
+}
+#dobrodosli p:first-of-type{
+    margin-top: 1em;
+    font-size: 2em;
+}
+.iskoseno{
+    font-style: italic;
+}
+.btn{
+    background-color: darkslategray;
+    color: white;
+}
+.btn:hover{
+    color: gray;
+    transform: scale(1.03,1.03)
+}
+#usluge .thumbnail{
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    margin-top: 20px;
+}
+.uvecaj img{
+    transition: .7s;
+    transition-timing-function: linear;
+}
+.uvecaj img:hover{
+    transform: scale(1.1,1.1)
+}
+#zasto_mi{
+    margin-top: 30px;
+}
+#zasto_mi p,.ponuda1 p{
+    font-size: 1.5em;
+}
+footer{
+    background-color: darkslategrey;
+    margin-top: 20px;
+    color: white;
+    letter-spacing: .2rem;
+    padding-top: 15px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: none;
+    color: grey;
+}
+footer i:hover {
+    transition: .3s;
+    transform: scale(1.3,1.3);
+}
+#onama .btn{
+    margin: .5em 0;
+}
+#onama .page-header{
+    border:none;
+    margin-top: 10px;
+    box-shadow: 3px 3px 4px darkslategray;
+    padding-top: .1em;
+}
+#onama .panel,#istorija .panel{
+    border-radius: 3%;
+    padding: 10px
+}
+#onama p , #istorija p,{
+    font-size: 1.2em;
+}
+#kontakt{
+    margin-top: 20px;
+}
+#kontakt .list-unstyled li{
+	padding: 1.8rem;
+    border-bottom: 0.5px solid  red;
+    font-size: 1.7rem;
+}
+#kontakt .list-unstyled li a{
+	color: black;
+	text-decoration: none;
+}
+#kontakt .list-unstyled li a:hover{
+	color: red;
+}
+iframe{
+    width: 100%;
+}
+#pitajte .jumbotron{
+    background-color: rgb(146, 80, 80);
+    color: white;
+}
+textarea{
+    resize: none;
+}
+#odgovor{
+    margin-bottom: 2em;
+}
+#galerija img{
+    margin-bottom: 2em;
+}
+#galerija .page-header{
+    box-shadow: -4px 0px 3px gray,4px 0px 3px gray;
+    padding: 1em;
+    border-bottom: 2px solid black;
+}
+#galerija h2{
+    margin: 1em 0;
+    border-bottom: 1px solid grey
+
+}
+.ponuda1 p{
+    border-top: 1px solid darkslategrey;
+    padding: 5px;
+}
+.ponuda1 h1{
+    margin-top: 40px;
+    color: gray;
+    border-bottom: 3px solid red;
+}
+.ponuda2 h3{
+    border-bottom: 2px solid red;
+}
+.ponuda2 ul{
+    text-align: center;
+    color: darkslategray;
+    font-size: 2rem;
+}
+.ponuda2 .list-unstyled li{
+    padding: 1.2rem;
+    border-bottom: 1px solid black;
+}
+.nav-tabs img{
+    height: 10rem;
+    width: 10rem;
+}
+.tab-content .panel{
+    border-radius: 0px!important;
+    margin-top: 0px!important;
+}
+.nav-tabs li{
+    text-align: center!important;
+}
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    margin-bottom: 0px;
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+.panel-collapse.collapse.in{
+	box-shadow: 3px 0px 5px black,-3px 5px 5px black;
+    transition: all 0.5s linear;
+    font-size: 1.2em;
+}
+.panel-title a{
+	font-weight: bold;
+    text-decoration: none;
+}
+#mapa{
+    color: black;
+    font-size: 1.8em;
+}
+
+#mapa ul li{
+    list-style: none;
+    font-size: 0.5em;
+    color: gray;
+}
+#mapa ul{
+    padding: 0 2rem;
+}
+#mapa li a{
+    text-decoration: none;
+    color: black;
+    margin-right: 2em;
+    transition: .5s;
+}
+#mapa li li a{
+    font-size: 1.45em;
+    transition: .5s;
+}
+#mapa li a:hover{
+    color: red;
+}
+#mapa .well{
+    margin: .5em 1em;
+    padding: 0px;
+}
+.smanji{
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1.2em;
+}
+#zakaziprobu .panel-body p{
+    font-size: 1.4em;
+    border-bottom: 2px solid red;
+    margin-top: 1.2em;
+}
+#registracija p,#popravka p{
+    font-size: 1.4em;
+    margin-top: 1.6em;
+    text-indent: 1.6em;
+}
+#registracija label{
+    font-size: 1.3em!important;
+}
+#registracija row{
+    margin-top: 3rem;
+}
+#registracija input:valid{
+    background-color: rgb(158, 245, 158)!important;
+}
+#registracija input:invalid{
+    background-color: rgb(218, 99, 99)!important;
+}
+#zamena img{
+    margin-top: 2em;
+}
+#popravka .jumbotron{
+    background-color: lightgray;
+    border-radius: 5%;
+}
+video{
+    margin: 0 auto;
+}
+.well{
+    color: black;
+    font-size: 1.4em;
+    border:1px solid gray;
+    margin: 2em 0;
+}
+.well p{
+    margin-top: 1em;
+}
+a:focus{
+    color: white!important;
+    text-decoration: none;
+}

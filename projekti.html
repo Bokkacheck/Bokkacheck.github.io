@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projekti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projekti strana koja sadrzi iframe u kojem se mogu prikazati moji dosadasnji projekti">
+    <meta name="keywords" content="projekti portfolio zmijice smb cars pratimis sifrovanje desifrovanje">
+    <meta name="author" content="Bojan Stojković, bokis97@live.com">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stil.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <script src="javascript/js1.js"></script>
+</head>
+
+<body onload="navigacija(),postavi()">
+    <video src="images/videopozadina.mp4" autoplay loop muted id="video-pozadina"></video>
+
+    <nav>
+        <div class="ime centriraj">
+            <a href="index.html" id="ispis"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="biografija.html">Biografija</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li class="aktivna"><a href="projekti.html">Projekti</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <section id="projekti">
+        <div class="row space-around">
+            <div class="tabceo flex-cetvrtina siva radius">
+                <div class="row space-around centriraj">
+                    <h2 id="naslov2" class="flex-ceo iskoseno centriraj">Kliknite na sličicu projekta da bi se on otvorio u novoj kartici, ukoliko kliknete na zadnju sličicu pokrenuće se skidanje tog projekta.</h2><br>
+                    <div class="smanji flex-dvetrecine">
+                       <a href="projekti/smb/index.html" target="blank"><img id="p1" class="slika radius" src="images/1.png" alt="projekti/smb/index.html"></a>
+                    </div>
+                    <div class="smanji flex-dvetrecine ">
+                        <a href="projekti/zmijice.html" target="blank"><img id="p2" class="slika radius" src="images/2.png" alt="projekti/zmijice.html"></a> 
+                    </div>
+                    <div class="smanji flex-dvetrecine">
+                        <a href="projekti/pratimis.html" target="blank"><img id="p3" class="slika radius" src="images/3.png" alt="projekti/pratimis.html"></a>
+                    </div>
+                    <div class="smanji flex-dvetrecine">
+                        <a href="download/SIFROVANJE PROGRAM.rar" target="blank"><img id="p3" class="slika radius" src="images/4.png" alt="projekti/pratimis.html"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="prevlacenje" class="flex-dvetrecine siva radius pomoc">
+                <h2 id="naslov1" class="iskoseno centriraj">Prevucite sličicu u uokvireno polje</h2>
+                <iframe id="odrediste" src="" frameborder="0" o=""></iframe>
+                <div id="pomocni"></div>
+                <div class="flex-ceo">Zadnji projekat je program za šifrovanje i dešifrovanje rađen u programskom jeziku C. Program ne može biti prevučen ali ga možete skinuti klikom na njega.</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer row space-around centriraj">
+            <div class="flex-cetvrtina flexpomoc">
+                <div>&copy;Bojan Stojkovic NRT-4/17 </div>
+                <div><a href="mailto:bokis97@live.com">bokis97@live.com</a></div>
+            </div>
+            <div class="flex-pola radius">
+                <ul>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="projekti/smb/index.html">SMB-CARS</a></li>
+                    <li><a href="projekti/zmijice.html">Zmijice</a></li>
+                    <li><a href="https://www.viser.edu.rs/">Visoka škola elektrotehnike i računarstva</a></li>
+                </ul>
+            </div>
+            <div class="flex-cetvrtina ">
+                <ul>
+                    <li><a href="https://www.facebook.com/boki.ktz"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/bokis97/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/bojankotezanac97"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

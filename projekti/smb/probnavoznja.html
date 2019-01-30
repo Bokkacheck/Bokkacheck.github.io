@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Ovo je stranica sa izborom automobila za probnu voznju i formom
+    na osnovu koje korisnik moze rezervista svoj termin probne voznje">
+    <meta name="keywords" content="SMBCARS SMB CARS probna voznja termin zakazivanje automobili">
+    <meta name="author" content="Bojan Stojković, bokis97@live.com">
+
+    <title>SMB CARS</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="m icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <div class="full-width">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                      
+                      </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                          <li><a href="index.html">POČETNA <span class="sr-only">(current)</span></a></li>
+                          <li><a href="onama.html">O NAMA</a></li>
+                          <li><a href="galerija.html">GALERIJA</a></li>
+                          <li><a href="ponuda.html">PONUDA VOZILA</a></li>
+                          <li class="active"><a href="probnavoznja.html">PROBNA VOŽNJA</a></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usluge <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="registracija.html">Registracija</a></li>
+                              <li><a href="zamena.html">Zamena staro za novo</a></li>
+                              <li><a href="servis.html">Servis i održavanje</a></li>
+                              <li><a href="popravka.html">Popravka vozila</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="download/cenovnik.pdf">Cenovnik usluga</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="kontakt.html">KONTAKT</a></li>
+                        </ul>
+                      </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                  </nav>
+            </div>
+
+<section id="zakaziprobu">
+    <div class="container-fluid">
+        <div class="panel">
+            <div class="panel-title">
+                <h1 class="text-center iskoseno">Zakazivanje probne vožnje</h1>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Kliknite na automobil koji želite da isprobate, a potom popunite formu koja se pojavi.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                            <img class="smanji" src="images/marke/opel.png" alt="opel logo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Opel Corsa</h3>
+                            <img src="images/ponuda/opel/opel_ponuda1.jpg" class="img-responsive" alt="opel corsa slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Opel Astra GTC</h3>
+                            <img src="images/ponuda/opel/opel_ponuda2.jpg" class="img-responsive" alt="opel astra gtc slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Opel Astra limuzina</h3>
+                            <img src="images/ponuda/opel/opel_ponuda4.jpg" class="img-responsive" alt="opel astra limuzina slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                        <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Opel Grandland X</h3>
+                            <img src="images/ponuda/opel/opel_ponuda5.jpg" class="img-responsive" alt="opel grandland x slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12 text-center">
+                                <img class="smanji" src="images/marke/vw.png" alt="volkswagen logo">
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Volkswagen Passat</h3>
+                            <img src="images/ponuda/volkswagen/volkswagen_ponuda1.png" class="img-responsive" alt="volkswagen passat slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Volkswagen Arteon</h3>
+                            <img src="images/ponuda/volkswagen/volkswagen_ponuda5.png" class="img-responsive" alt="volkswagen arteon slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Volkswagen Golf</h3>
+                            <img src="images/ponuda/volkswagen/volkswagen_ponuda8.png" class="img-responsive" alt="volkswagen golf slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                        <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Volkswagen Buba</h3>
+                            <img src="images/ponuda/volkswagen/volkswagen_ponuda6.png" class="img-responsive" alt="volkswagen buba slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12 text-center">
+                                <img class="smanji" src="images/marke/renault.png" alt="renault logo">
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Renault Clio</h3>
+                            <img src="images/ponuda/renault/renault_ponuda1.jpg" class="img-responsive" alt="renault clio slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Renault Scenic</h3>
+                            <img src="images/ponuda/renault/renault_ponuda2.jpg" class="img-responsive" alt="renault scenic slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Renault Talisman</h3>
+                            <img src="images/ponuda/renault/renault_ponuda6.jpg" class="img-responsive" alt="renault talisman slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                        <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Renault Kadjar</h3>
+                            <img src="images/ponuda/renault/renault_ponuda3.jpg" class="img-responsive" alt="renault kadjar slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-12 text-center">
+                                <img class="smanji" src="images/marke/audi.png" alt="audi logo">
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Audi A3</h3>
+                            <img src="images/ponuda/audi/audi_ponuda2.jpg" class="img-responsive" alt="audi a3 slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Audi A4</h3>
+                            <img src="images/ponuda/audi/audi_ponuda3.jpg" class="img-responsive" alt="audi a4 slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Audi A7</h3>
+                            <img src="images/ponuda/audi/audi_ponuda6.jpg" class="img-responsive" alt="audi a7 slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                        <div class="col-sm-6 col-md-3"> 
+                        <div class="thumbnail">
+                            <h3 class="text-center">Audi Q4</h3>
+                            <img src="images/ponuda/audi/audi_ponuda8.jpg" class="img-responsive" alt="audi q4 slika" onclick="zakazi()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="zakazivanjemodal">
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalzakazivanje">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Zakaži probnu vožnju</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="ime">Ime:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="ime" placeholder="Unesite vaše ime">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="prezime">Prezime:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="prezime" placeholder="Unesite vaše prezime">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="telefon">Telefon:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="telefon" placeholder="xxx/xxx-xxxx">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="mail">E-mail:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="email" class="form-control" id="mail" placeholder="Unesite vaš e-mail.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="datum">Datum:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="date" class="form-control" id="datum" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="vreme">Vreme:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="time" class="form-control" id="vreme" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="gorivo">Tip goriva</label>
+                            </div>
+                            <div class="col-md-10">
+                                <select class="form-control" name="gorivo" id="gorivo">
+                                    <option value="plin">Benzin+Gas</option>
+                                    <option value="benzin">Benzin</option>
+                                    <option value="dizel">Dizel</option>
+                                </select>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>Tip menjača</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="radio" name="menjac" value="manuelni" id="manuelni">
+                                <label for="manuelni">Manuelni</label>
+                                <input type="radio" name="menjac" value="automatski" id="automatski">
+                                <label for="automatski">Automatski</label>
+                            </div>
+                        </div>
+                    </div>        
+                                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Otkaži</button>
+                    <button type="button" class="btn" onclick="alert('Vaš zahtev je poslat')" data-dismiss="modal">Pošalji</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</section>
+
+
+<footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                  <p class="text-center">&copy; Bojan Stojković <br> NRT-4/17</p>
+                </div>
+                <div class="col-md-6 text-center">
+                <ul class="list-inline list-unstyled">
+                  <li><a href="index.html">POCETNA</a></li>
+                  <li><a href="kontakt.html">KONTAKT</a></li>
+                  <li><a href="mapasajta.html">MAPA SAJTA</a></li>
+                  <li><a href="faq.html">ČESTA PITANJA</a></li>
+                </ul>
+                <p>
+                    <a href="mailto:smbcars@hotmail.com">smbcars@hotmail.com&nbsp;</a>
+                    <a class="text-nowrap" href="tel:+11-2471-099">&nbsp;011/1234-567</a>
+                </p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                  <p class="lead text-center">
+                    <a href="https://www.instagram.com/bokis97/?hl=sr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/boki.ktz"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/user/bojankotezanac97/featured"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+  </footer>
+
+  <script>
+      function zakazi(){
+          $("#modalzakazivanje").modal();
+      }
+
+  </script>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
