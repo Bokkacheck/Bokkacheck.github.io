@@ -67,7 +67,6 @@ function provera()
     }
 
 }
-
 function startuj()
 {
     var i = 0;

@@ -402,9 +402,10 @@ footer .row{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    min-height: 100vh;
 }
 #galerija_prikaz img{
-    max-height: 100%!important;
+    max-height: 60vh;
 }
 .strelice{
     color: white;
