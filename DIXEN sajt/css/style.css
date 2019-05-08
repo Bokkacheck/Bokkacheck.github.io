@@ -1,0 +1,384 @@
+/*@media  (max-width: 668px) {
+    body {
+      font-size: 0.9em!important;
+    }
+    #mapatext h1{
+      font-size: 1.8em;
+    }
+  }
+  @media (min-width: 992px) and( max-width: 1200px) {
+    body {
+      font-size: 1em!important;
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    body {
+      font-size: 1.1em!important;
+    }
+  }
+  @media (min-width: 1400px) {
+    body {
+      font-size: 1.3em!important;
+    }
+  }*/
+a,a:hover{
+    text-decoration: none;
+    color: black;
+}
+*{
+  z-index: 1;
+}
+body{
+  scroll-behavior: smooth;
+  background-image: url('../images/37diamond.jpg');
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+.btn{
+    background-color: darkslategray;
+    color: white;
+    transition: all .7s;
+}
+.btn:hover{
+    color: white;
+    transform:scale(1.1,1.1);
+    background-color: lightslategray;
+}
+nav ul li  .active{
+  border-top: 2px solid red;
+}
+nav ul li span{
+  border-top: 2px solid lightslategray;
+  font-weight: bold;
+  font-style: italic;
+}
+nav ul li span:hover{
+  border-top: 2px solid red;
+}
+.navbar-brand{
+    padding: 0px;
+}
+#prlx2{
+    background-image: url("../images/37diamond.jpg");
+    background-attachment: fixed;
+    padding: 4% 0%;
+}
+.navbar{
+  padding: 0%;
+  border-top: 2px solid black;
+  border-bottom: 3px solid gray;
+}
+header{
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  z-index: 5;
+}
+header img{
+  width: 20%;
+  transform: skewX(-20deg);
+  height: auto;
+}
+#prozor{
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('../images/Rebels_12.jpg');
+  background-repeat: no-repeat;
+  background-position: center -1000px;
+  padding: 20% 0%;
+  text-shadow: 5px 5px 5px black; 
+  position: relative;
+}
+#prozor h1{
+  position: relative;
+  left: 100%;
+}
+#prozor p{
+  position: relative;
+  left: -100%;
+}
+.card img{
+  transition:all 1s;
+}
+ .card-body .card{
+  overflow: hidden;
+  background-color: black;
+}
+.card-body .card img:hover{
+  transform: scale(1.2,1.2)!important;
+  opacity: .6;
+}
+.crno{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, .4)
+}
+.slider{
+  width: 100%;
+  overflow: hidden;
+}
+.slides{
+  position: relative;
+}
+.slide{
+  float: left;
+  width: 16.66%;
+}
+#prlx1{
+  background-image: url('../images/textura-crna.jpg');
+  background-attachment: fixed;
+}
+#prlx1 .slider{
+  transform: skewX(-10deg)
+}
+#prlx1 .row{
+  background-image: url('../images/textura-crna.jpg');
+  background-attachment: fixed;
+  border-radius: 20px;
+  border: 2px solid lightgray;
+  overflow: hidden;
+  position: relative;
+}
+#prlx1 .row:first-of-type{
+  left: 110%;
+  width: 0%;
+}
+#prlx1 .row:nth-of-type(2){
+  left: -110%;
+}
+#prlx1 h2:first-of-type{
+  position: relative;
+  left: -100%;
+}
+#prlx1 h2:nth-of-type(2){
+  position: relative;
+  left: 100%;
+}
+.zaobljeno{
+  border-radius: 20px;
+}
+#videoCarousel video{
+  min-width: 100%;
+  max-height: 100vh;
+}
+#redSlider{
+  border: 10px solid darkslategray;
+  position: relative;
+  z-index: 5;
+  left: 50%;
+  width: 0%;
+  overflow: hidden;
+  height: 300px;
+}
+#labelaSlider{
+  position: absolute;
+  width: 30%;
+  left: 90%;
+  z-index: 6;
+  top: 35%;
+  color: darkslategray!important;
+  transition: all .5s;
+}
+#labelaSlider:hover{
+  cursor: pointer;
+  left: 70%;
+  color: white!important;
+}
+#labelaSlider div{
+  position: relative;
+  font-size: 1.2em;
+  background-color: darkslategray;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: opacity .5s;
+  left: -500%;
+}
+#labelaSlider div:hover{
+  opacity: 1!important;
+}
+#prlx2 .card{
+  visibility: hidden;
+  opacity: .2;
+  width: 0%;
+  height: 0%;
+}
+footer .row:first-of-type  [class*='col-4 align-self']{
+  border-bottom: 2px solid white;
+}
+footer .row:nth-of-type(3)  [class*='col-4 align-self']{
+  border-bottom: 2px solid white;
+}
+.okvirIkone{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+	background-color: white;
+  border-radius: 999px;
+  position: relative;
+  opacity: .7;
+  transition: all .8s;
+}
+.okvirIkone i {
+  text-align: center;
+  font-size: 1em;
+}
+.okvirIkone:hover{
+  top: -5px;
+  transform: scale(1.2,1.2);
+  opacity: 1;
+}
+footer{
+  width: 100%;
+  position: absolute;
+  border-top: 3px solid gray;
+  border-bottom: 2px solid black;
+  font-size: 120%;
+  opacity: .8;
+}
+footer:nth-of-type(1){
+  left: -50%;
+  z-index: 5;
+}
+footer:nth-of-type(2){
+  left: 50%;
+  z-index: 4;
+}
+.krug{
+  overflow: hidden;
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+
+}
+#mapa{
+  position: relative;
+}
+iframe{
+  width: 100%;
+}
+#mapatext{
+  position: absolute;
+  left: -5px;
+  width: 100%;
+  height: 500px;
+  background-color:rgba(0, 0, 0,.8);
+  text-shadow: 5px 5px 5px black;
+}
+#mapa:hover #mapatext{
+  visibility: hidden;
+}
+textarea{
+  resize: none;
+  height: 200px;
+}
+#podaci{
+  font-size: 1.2em;
+  font-style: italic;
+  position: relative;
+}
+#podaci .row{
+  padding: 10px;
+  border-bottom: 2px solid rgb(133, 39, 39);
+}
+#mapa h1 span{
+  position: relative;
+  margin-left: -.2em;
+}
+#mapa h1 span:nth-of-type(1),#mapa h1 span:nth-of-type(3),#mapa h1 span:nth-of-type(9),#mapa h1 span:nth-of-type(13){
+  left: -250%;
+  top: -400px;
+}
+#mapa h1 span:nth-of-type(4),#mapa h1 span:nth-of-type(6),#mapa h1 span:nth-of-type(10),#mapa h1 span:nth-of-type(7){
+  left: -250%;
+  top: 800px;
+}
+#mapa h1 span:nth-of-type(8),#mapa h1 span:nth-of-type(11),#mapa h1 span:nth-of-type(14),#mapa h1 span:nth-of-type(16){
+  left: 250%;
+  top: -600px;
+}
+#mapa h1 span:nth-of-type(12),#mapa h1 span:nth-of-type(2),#mapa h1 span:nth-of-type(5),#mapa h1 span:nth-of-type(15){
+  left: 250%;
+  top: 800px;
+}
+#podaci .col-10,form .row .col-10{
+  opacity: 0;
+}
+.galerijaslike {
+  transform: perspective(1200px) rotateX(15deg) rotateY(-30deg) scale(1.2, 1.2) translateZ(-200px) translateX(-150px) translateY(-50px);
+  box-shadow: -12px -12px 25px black, -7px 4px 25px black;
+  transform-style: preserve-3d;
+}
+.rotiran:hover .galerijaslike {
+  transform: perspective(1400px) rotateY(165deg) rotateX(20deg) scale(1.1, 1.1);
+  box-shadow: 5px 2px 22px black, 11px -11px 22px black;
+  transition: all 1s ease-in-out;
+}
+.rotiran:hover .slikatekst {
+  opacity: 0;
+  transition: none !important;
+}
+.rotirantekst {
+  backface-visibility: hidden;
+  position: absolute;
+  transform: rotateY(180deg);
+}
+.slikatekst {
+  backface-visibility: hidden;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .4)
+}
+.fullscreen-modal{
+  min-width: 100%;
+  margin: 0;
+}
+.fullscreen-modal .modal-content {
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.galerijaSlider .carousel-indicators li,.carousel-indicators li.active {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.galerijaSlider .carousel-indicators li.active {
+  border: 4px solid lightseagreen;
+}
+.galerijaSlider .carousel-indicators img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.galerijaSlider .carousel-item img {
+  max-height: 90vh;
+  width: auto;
+  margin: 0 auto;
+}
+#onamalogo {
+  position: relative;
+}
+#pozadinajedan,#pozadinadva {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+#pozadinajedan {
+  clip-path: polygon(19% 0, 43% 100%, 33% 0, 46% 100%, 44% 0, 50% 100%, 56% 1%, 54% 100%, 69% 0, 59% 100%, 83% 0);
+  background-color: rgb(247, 247, 130) !important;
+  z-index: 1;
+  animation: animacija 1s alternate infinite;
+}
+@keyframes animacija {
+  0% {
+      clip-path: polygon(19% 0, 43% 100%, 33% 0, 46% 100%, 44% 0, 50% 100%, 56% 1%, 54% 100%, 69% 0, 59% 100%, 83% 0);
+  }
+
+  100% {
+      clip-path: polygon(0 0, 41% 100%, 19% 17%, 45% 100%, 37% 11%, 50% 100%, 59% 13%, 55% 100%, 82% 10%, 58% 100%, 100% 0);
+  }
+}

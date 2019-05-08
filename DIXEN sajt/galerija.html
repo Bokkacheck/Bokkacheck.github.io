@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DiXen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="full-width">
+        <img class="img-fluid" src="images/asp_logo.png" alt="">
+        <img class="img-fluid" src="images/infinity.jpg" alt="">
+        <img class="img-fluid" src="images/Kitoko_Logo.jpg" alt="">
+    </header>
+    <nav class="navbar fixed-top navbar-expand-md bg-dark pl-5 pr-5 d-none" style="z-index:4">
+        <ul class="navbar-nav nav-fill w-100">
+            <li class="nav-item"><a class="nav-link text-center text-light" href="index.html"><span>Početna
+                        strana</span></a></li>
+            <li class="nav-item"><a class="nav-link text-center text-light" href="onama.html"><span>O nama</span></a></li>
+            <li class="nav-item"><a class="nav-link text-center text-light" href="proizvodi.html"><span>Proizvodi</span></a></li>
+            <li class="nav-item"><a class="nav-link text-center text-light" href="galerija.html"><span class="active">Galerija</span></a></li>
+            <li class="nav-item"><a class="nav-link text-center text-light" href="kontakt.html"><span>Kontakt</span></a></li>
+        </ul>
+    </nav>
+
+    <nav class="navbar  navbar-expand-md bg-light navbar-light pr-5 pl-5 m-0" style="z-index:5">
+        <a class="navbar-brand font-italic" href="#"><img src="images/g4523.png" width="140px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-fill w-100">
+                <li class="nav-item"><a class="nav-link text-center text-dark" href="index.html"><span>Početna
+                            strana</span></a></li>
+                <li class="nav-item"><a class="nav-link text-center text-dark" href="onama.html"><span>O nama</span></a></li>
+                <li class="nav-item"><a class="nav-link text-center text-dark" href="proizvodi.html"><span>Proizvodi</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-center text-dark" href="galerija.html"><span  class="active">Galerija</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-center text-dark" href="kontakt.html"><span>Kontakt</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <h1 class="text-center w-100 bg-dark text-light border-bottom font-italic p-3">Galerija</h1>
+    <div class="full-width p-5">
+        <div class="container-fluid pt-5 pb-5 pr-5">
+            <div class="row pl-5">
+                <div class="rotiran col-md-6">
+                    <div class="galerijaslike" onclick="$('#rebelModal').modal('show')">
+                        <div class="rotirantekst w-100 h-100 bg-light d-flex">
+                            <span class="align-self-center text-center w-100 font-italic bg-dark text-light">
+                                <h1>Pogledaj galeriju</h1>
+                            </span>
+                        </div>
+                        <div class="slikatekst w-100 h-100 d-flex">
+                            <span class="align-self-center text-center w-100 font-italic text-light">
+                                <h1>Rebelution kolekcija</h1>
+                            </span>
+                        </div>
+                        <img class="img-fluid" src="images/galerija/rebel/prikaz.jpg" alt="">
+                    </div>
+                </div>
+                <div class="rotiran col-md-6">
+                    <div class="galerijaslike" onclick="$('#infinityModal').modal('show')">
+                        <div class="rotirantekst w-100 h-100 bg-light d-flex">
+                            <span class="align-self-center text-center w-100 font-italic bg-dark text-light">
+                                <h1>Pogledaj galeriju</h1>
+                            </span>
+                        </div>
+                        <div class="slikatekst w-100 h-100 d-flex">
+                            <span class="align-self-center text-center w-100 font-italic text-light">
+                                <h1>Infinity kolekcija</h1>
+                            </span>
+                        </div>
+                        <img class="img-fluid" src="images/galerija/infinity/prikaz.jpg" alt="">
+                    </div>
+                </div>
+                <div class="rotiran col-md-6">
+                    <div class="galerijaslike" onclick="$('#kitokoModal').modal('show')">
+                        <div class="rotirantekst w-100 h-100 bg-light d-flex">
+                            <span class="align-self-center text-center w-100 font-italic bg-dark text-light">
+                                <h1>Pogledaj galeriju</h1>
+                            </span>
+                        </div>
+                        <div class="slikatekst w-100 h-100 d-flex">
+                            <span class="align-self-center text-center w-100 font-italic text-light">
+                                <h1>Kitoko kolekcija</h1>
+                            </span>
+                        </div>
+                        <img class="img-fluid" src="images/galerija/kitoko/prikaz.jpg" alt="">
+                    </div>
+                </div>
+                <div class="rotiran col-md-6">
+                    <div class="galerijaslike" onclick="$('#prolecnaModal').modal('show')">
+                        <div class="rotirantekst w-100 h-100 bg-light d-flex">
+                            <span class="align-self-center text-center w-100 font-italic bg-dark text-light">
+                                <h1>Pogledaj galeriju</h1>
+                            </span>
+                        </div>
+                        <div class="slikatekst w-100 h-100 d-flex">
+                            <span class="align-self-center text-center w-100 font-italic text-light">
+                                <h1>Prolecna kolekcija</h1>
+                            </span>
+                        </div>
+                        <img class="img-fluid" src="images/galerija/prolecejesen/prikaz.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="galerijaSlider">
+        <div class="modal fade" id="infinityModal" tabindex="-1" role="dialog" aria-labelledby="infinityModal"
+            aria-hidden="true">
+            <div class="modal-dialog fullscreen-modal" role="document">
+                <div class="modal-content" style="min-width:100vw;">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-italic text-center w-100" id="exampleModalLabel">Infinity kolekcija</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body w-100 h-100 bg-dark p-0">
+                        <div id="infinitySlider" class="carousel slide w-100" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#infinitySlider" data-slide-to="0" class="active"><img
+                                        class="w-100 h-100" src="images/galerija/infinity/INFINITI_GOTHIC.jpg" alt="">
+                                </li>
+                                <li data-target="#infinitySlider" data-slide-to="1"><img class="w-100 h-100"
+                                        src="images/galerija/infinity/INFINITI_HIGH_LIFT.jpg" alt=""></li>
+                                <li data-target="#infinitySlider" data-slide-to="2"><img class="w-100 h-100"
+                                        src="images/galerija/infinity/INFINITI_REGULAR1.jpg" alt=""></li>
+                                <li data-target="#infinitySlider" data-slide-to="3"><img class="w-100 h-100"
+                                        src="images/galerija/infinity/INFINITI_REGULAR3.jpg" alt=""></li>
+                                <li data-target="#infinitySlider" data-slide-to="4"><img class="w-100 h-100"
+                                        src="images/galerija/infinity/INFINITI_bRED.jpg" alt=""></li>
+                            </ol>
+                            <div class="carousel-inner w-100 d-flex">
+                                <div class="carousel-item active">
+                                    <img class="d-block" src="images/galerija/infinity/INFINITI_GOTHIC.jpg"
+                                        alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/infinity/INFINITI_HIGH_LIFT.jpg"
+                                        alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/infinity/INFINITI_REGULAR1.jpg"
+                                        alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/infinity/INFINITI_REGULAR3.jpg"
+                                        alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/infinity/INFINITI_bRED.jpg"
+                                        alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#infinitySlider" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#infinitySlider" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="kitokoModal" tabindex="-1" role="dialog" aria-labelledby="kitokoModal"
+            aria-hidden="true">
+            <div class="modal-dialog fullscreen-modal" role="document">
+                <div class="modal-content" style="min-width:100vw;">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-italic text-center w-100" id="exampleModalLabel">Kitoko kolekcija</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body w-100 h-100 bg-dark p-0">
+                        <div id="kitokoSlider" class="carousel slide w-100" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#kitokoSlider" data-slide-to="0" class="active">
+                                    <img class="w-100 h-100" src="images/galerija/kitoko/AGE-PREVENT.jpg" alt="">
+                                </li>
+                                <li data-target="#kitokoSlider" data-slide-to="1">
+                                    <img class="w-100 h-100" src="images/galerija/kitoko/HYDRO_REVIVE.jpg" alt="">
+                                </li>
+                                <li data-target="#kitokoSlider" data-slide-to="2">
+                                    <img class="w-100 h-100" src="images/galerija/kitoko/NUTRI_RESTORE.jpg" alt="">
+                                </li>
+                                <li data-target="#kitokoSlider" data-slide-to="3">
+                                    <img class="w-100 h-100" src="images/galerija/kitoko/PURIFY_CONTROL.jpg" alt="">
+                                </li>
+                                <li data-target="#kitokoSlider" data-slide-to="4">
+                                    <img class="w-100 h-100" src="images/galerija/kitoko/SPECIAL_TREATMENTS.jpg" alt="">
+                                </li>
+                                <li data-target="#kitokoSlider" data-slide-to="5">
+                                    <img class="w-100 h-100" src="images/galerija/kitoko/VOLUME-ENHANCE.jpg" alt="">
+                                </li>
+                            </ol>
+                            <div class="carousel-inner w-100 d-flex">
+                                <div class="carousel-item active">
+                                    <img class="d-block" src="images/galerija/kitoko/AGE-PREVENT.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/kitoko/HYDRO_REVIVE.jpg"
+                                        alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/kitoko/NUTRI_RESTORE.jpg"
+                                        alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/kitoko/PURIFY_CONTROL.jpg"
+                                        alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/kitoko/SPECIAL_TREATMENTS.jpg"
+                                        alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/kitoko/VOLUME-ENHANCE.jpg"
+                                        alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#kitokoSlider" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#kitokoSlider" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="rebelModal" tabindex="-1" role="dialog" aria-labelledby="rebelModal"
+            aria-hidden="true">
+            <div class="modal-dialog fullscreen-modal" role="document">
+                <div class="modal-content" style="min-width:100vw;">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-italic text-center w-100" id="exampleModalLabel">Rebelution kolekcija</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body w-100 h-100 bg-dark p-0">
+                        <div id="rebelSlider" class="carousel slide w-100" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#rebelSlider" data-slide-to="0" class="active">
+                                    <img class="w-100 h-100" src="images/galerija/rebel/Rebels_04.jpg" alt="">
+                                </li>
+                                <li data-target="#rebelSlider" data-slide-to="1">
+                                    <img class="w-100 h-100" src="images/galerija/rebel/Rebels_08.jpg" alt="">
+                                </li>
+                                <li data-target="#rebelSlider" data-slide-to="2">
+                                    <img class="w-100 h-100" src="images/galerija/rebel/Rebels_11.jpg" alt="">
+                                </li>
+                                <li data-target="#rebelSlider" data-slide-to="3">
+                                    <img class="w-100 h-100" src="images/galerija/rebel/Rebels_12.jpg" alt="">
+                                </li>
+                                <li data-target="#rebelSlider" data-slide-to="4">
+                                    <img class="w-100 h-100" src="images/galerija/rebel/Rebels_13.jpg" alt="">
+                                </li>
+                            </ol>
+                            <div class="carousel-inner w-100 d-flex">
+                                <div class="carousel-item active">
+                                    <img class="d-block" src="images/galerija/rebel/Rebels_04.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/rebel/Rebels_08.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/rebel/Rebels_11.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/rebel/Rebels_12.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/rebel/Rebels_13.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#rebelSlider" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#rebelSlider" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="prolecnaModal" tabindex="-1" role="dialog" aria-labelledby="prolecnaModal"
+            aria-hidden="true">
+            <div class="modal-dialog fullscreen-modal" role="document">
+                <div class="modal-content" style="min-width:100vw;">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-italic text-center w-100" id="exampleModalLabel">Prolecna kolekcija</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body w-100 h-100 bg-dark p-0">
+                        <div id="prolecnaSlider" class="carousel slide w-100" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#prolecnaSlider" data-slide-to="0" class="active">
+                                    <img class="w-100 h-100" src="images/galerija/prolecejesen/15_N72c79jGGNpp-JTwbmsnxwnEIydkOe.jpg" alt="">
+                                </li>
+                                <li data-target="#prolecnaSlider" data-slide-to="1">
+                                    <img class="w-100 h-100" src="images/galerija/prolecejesen/1w-ILBdRWaO6yuAquzdiRIZVMuUNr5V0v.jpg" alt="">
+                                </li>
+                                <li data-target="#prolecnaSlider" data-slide-to="2">
+                                    <img class="w-100 h-100" src="images/galerija/prolecejesen/Affinage_AW_02.jpg" alt="">
+                                </li>
+                                <li data-target="#prolecnaSlider" data-slide-to="3">
+                                    <img class="w-100 h-100" src="images/galerija/prolecejesen/Affinage_AW_03.jpg" alt="">
+                                </li>
+                                <li data-target="#prolecnaSlider" data-slide-to="4">
+                                    <img class="w-100 h-100" src="images/galerija/prolecejesen/Affinage_AW_06.jpg" alt="">
+                                </li>
+                            </ol>
+                            <div class="carousel-inner w-100 d-flex">
+                                <div class="carousel-item active">
+                                    <img class="d-block" src="images/galerija/prolecejesen/15_N72c79jGGNpp-JTwbmsnxwnEIydkOe.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/prolecejesen/1w-ILBdRWaO6yuAquzdiRIZVMuUNr5V0v.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/prolecejesen/Affinage_AW_02.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/prolecejesen/Affinage_AW_03.jpg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block" src="images/galerija/prolecejesen/Affinage_AW_06.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#prolecnaSlider" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#prolecnaSlider" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-center text-light  p-2 font-italic font-weight-bold">
+        <div class="row justify-content-center">
+            <div class="col-4 align-self-center">dixen@gmail.com</div>
+            <div class="col-4 col-sm-2 col-md-2">
+                <img class="img-fluid" src="images/g4523.png" alt="">
+            </div>
+            <div class="col-4 align-self-center">064/1234-567</div>
+        </div>
+        <div class="row justify-content-around border-bottom">
+            <div class="col-6 col-md-3 border">Pocetna</div>
+            <div class="col-6 col-md-3 border">Kontakt</div>
+            <div class="col-6 col-md-3 border">Proizvodi</div>
+            <div class="col-6 col-md-3  border">Affinage official</div>
+        </div>
+        <div class="row text-center justify-content-center p-3">
+            <div class="col-6 col-sm-4 col-md-3 border-bottom p-2">
+                <div class="okvirIkone">
+                    <i class="fab fa-facebook-f" style="color:blue"></i>
+                </div>
+                <div class="okvirIkone">
+                    <i class="fab fa-instagram" style="color:#E1306C;"></i>
+                </div>
+                <div class="okvirIkone">
+                    <i class="fab fa-twitter" style="color:lightskyblue"></i>
+                </div>
+                <div class="okvirIkone">
+                    <i class="fab fa-youtube" style="color:red"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 font-weight-normal font-style-normal">
+                &copy; 2019 DiXen. Sva prava zadrzana.
+            </div>
+        </div>
+    </footer>
+    <footer class="bg-dark text-center text-light  p-2 font-italic font-weight-bold">
+        <div class="row justify-content-center">
+            <div class="col-4 align-self-center">dixen@gmail.com</div>
+            <div class="col-4 col-sm-2 col-md-2">
+                <img class="img-fluid" src="images/g4523.png" alt="">
+            </div>
+            <div class="col-4 align-self-center">064/1234-567</div>
+        </div>
+        <div class="row justify-content-around border-bottom">
+            <div class="col-6 col-md-3 border">Pocetna</div>
+            <div class="col-6 col-md-3 border">Kontakt</div>
+            <div class="col-6 col-md-3 border">Proizvodi</div>
+            <div class="col-6 col-md-3  border">Affinage official</div>
+        </div>
+        <div class="row text-center justify-content-center p-3">
+            <div class="col-6 col-sm-4 col-md-3 border-bottom p-2">
+                <div class="okvirIkone">
+                    <i class="fab fa-facebook-f" style="color:blue"></i>
+                </div>
+                <div class="okvirIkone">
+                    <i class="fab fa-instagram" style="color:#E1306C;"></i>
+                </div>
+                <div class="okvirIkone">
+                    <i class="fab fa-twitter" style="color:lightskyblue"></i>
+                </div>
+                <div class="okvirIkone">
+                    <i class="fab fa-youtube" style="color:red"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 font-weight-normal font-style-normal">
+                &copy; 2019 DiXen. Sva prava zadrzana.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js">
+    </script>
+    <!-- Include all compiled plugins -->
+    <script src="js/bootstrap.min.js">
+    </script>
+
+    <script src="js/jsPocetakStranica.js">
+    </script>
+    <script>
+
+    </script>
+
+</body>
+
+</html>
