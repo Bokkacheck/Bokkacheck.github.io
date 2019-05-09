@@ -1,7 +1,7 @@
-var visinaFooter = parseInt($('footer').height()+20);
+var visinaFooter = parseInt($('footer').height());
 var sirinaFuter = parseInt($('footer').width());
-$('footer:nth-of-type(2)').css('clip', 'rect(0px,' + sirinaFuter+100 + 'px,' + visinaFooter + 'px,' + sirinaFuter / 2 + 'px)');
-$('footer:nth-of-type(1)').css('clip', 'rect(0px,' + sirinaFuter / 2 + 'px,' + visinaFooter+ 10 + 'px,0px)');
+$('footer:nth-of-type(1)').css('clip', 'rect(0px,' + sirinaFuter / 2 + 'px,' + visinaFooter + 10 + 'px,0px)');
+$('#footerPomoc').height(visinaFooter+20);
 
 $('nav:nth-of-type(1)').removeClass('d-none');
 var visinaNavigacije = $('nav:nth-of-type(1)').css('height');
@@ -41,7 +41,7 @@ function pocetak() {
     //ANIMACIJA PRVA-POCETNI
     $('#prozor').animate({ 'background-position-y': '0' }, 1200);
     $('#prozor h1').animate({ left: '0' }, 1400);
-    $('#prozor p').animate({ left: '0' }, 1700);
+    $('#prozor p').animate({ left: '0'}, 1700);
 }
 function slajderVideo(mod) {        //treba zameniti, mora krace
     for (var i = 0; i < 3; i++) {
@@ -90,9 +90,14 @@ function proracunSlider() {
         $('i').removeClass('fa-2x');
         $('.slides').width($('.slider').width() * 1.5);
     }
-    //i za najprodavanije proizvode peding
-    if($(window).width()<992)
-    $('#prlx1 .row:first-of-type').removeClass('pl-5 pr-5');
+    //i  za jos neke izmene vezano za resize
+    if($(window).width()<992){
+        $('#prlx1 .row:first-of-type').removeClass('pl-5 pr-5');
+        $('#prlx2').removeClass('p-5');
+    }
+    if($(window).width()<480){
+        $('#prlx2>div>div').removeClass('pl-5 pr-5');
+    }
 }
 
 (function () {      //Za slike pocetne
@@ -125,6 +130,7 @@ var desnolevo = true;
 var levodesno = true;
 var animacijaNavigacija = true;
 var labelaSliderAnimacija = true;
+var footerAnimacija = true;
 $(document).scroll("scroll", skrolovanje);
 function skrolovanje() {
     var wScroll = $(window).scrollTop();
@@ -147,13 +153,13 @@ function skrolovanje() {
             animacijaNavigacija = true;
         }
     }
-    if (proveraVrh(document.querySelector('#prvi')) && korisnici) {
+    if (proveraVrh(document.querySelector('#prlx2 h2')) && korisnici) {
         $('#prlx2 .card').css('visibility', 'visible');
         $('#prlx2 .card').animate({ width: '100%', height: '100%', opacity: '1' }, 2000);
         korisnici = false;
     }
     if (proveraVrh(document.querySelector('#prlx1 .row:first-of-type')) && desnolevo) {
-        $('#prlx1 .row:first-of-type').animate({ width: '100%', left: '0%' }, 1500);
+        $('#prlx1 .row:first-of-type').animate({  left: '0%' }, 1500);
         $('#prlx1 h2:first-of-type').animate({ left: '0' }, 1700);
         desnolevo = false;
     }
@@ -172,13 +178,16 @@ function skrolovanje() {
         });
         labelaSliderAnimacija = false;
     }
-    if (proveraVrh(document.querySelector('footer:nth-of-type(1)'))) {
-        $('footer:nth-of-type(1)').animate({ left: '0px', opacity: 1 }, 1500, function () {
-            $('footer').animate({ opacity: '1' }, { duration: 500, queue: false });
-            $('footer:nth-of-type(1)').css('clip', 'rect(0px,' + 2*sirinaFuter + 'px,' + 2*visinaFooter + 'px,0px)');
-            $('footer:nth-of-type(2)').addClass("d-none");
+    if (proveraVrh(document.querySelector('footer:nth-of-type(1)')) && footerAnimacija) {
+        $('footer:nth-of-type(2)').animate({ left: '0%', opacity: 1 }, 1700, function () {
+            $('footer').animate({ opacity: '1' }, { duration: 750, queue: false });
+            $('footer:nth-of-type(2)').css('clip', 'rect(0px,' + 2*sirinaFuter + 'px,' + 2*visinaFooter + 'px,0px)');
+            $('footer:nth-of-type(1)').addClass("d-none");
+            $('#footerPomoc').addClass('d-none');
         })
-        $('footer:nth-of-type(2)').animate({ left: '0%', opacity: 1 }, 1500);
+        $('#footerPomoc').animate({left: '0%'}, 1700);
+        $('footer:nth-of-type(1)').animate({ left: '0%', opacity: 1 }, 1700);
+        footerAnimacija = false;
     }
 }
 function proveraVrh(elem) {

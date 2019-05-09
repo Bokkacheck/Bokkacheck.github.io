@@ -1,12 +1,14 @@
-var visinaFooter = parseInt($('footer').height()+100);
+var visinaFooter = parseInt($('footer').height());
 var sirinaFuter = parseInt($('footer').width());
-$('footer:nth-of-type(2)').css('clip', 'rect(0px,' + sirinaFuter + 10 + 'px,' + visinaFooter + 'px,' + sirinaFuter / 2 + 'px)');
-$('footer:nth-of-type(1)').css('clip', 'rect(0px,' + sirinaFuter / 2 + 'px,' + visinaFooter + 'px,0px)');
+$('footer:nth-of-type(1)').css('clip', 'rect(0px,' + sirinaFuter / 2 + 'px,' + visinaFooter + 10 + 'px,0px)');
+$('#footerPomoc').height(visinaFooter+20);
+
 $('nav:nth-of-type(1)').removeClass('d-none');
 var visinaNavigacije = $('nav:nth-of-type(1)').css('height');
 $('nav:nth-of-type(1)').css('height', '0px');
 $('nav:nth-of-type(1)').hide();
 var animacijaNavigacija = true;
+var footerAnimacija = true;
 $(document).scroll("scroll", skrolovanje);
 function skrolovanje() {
     var wScroll = $(window).scrollTop();
@@ -26,12 +28,16 @@ function skrolovanje() {
             animacijaNavigacija = true;
         }
     }
-    if (proveraVrh(document.querySelector('footer:nth-of-type(1)'))) {
-        $('footer:nth-of-type(1)').animate({ left: '0%', opacity: 1 }, 1500, function () {
-            $('footer').animate({ opacity: '1' }, { duration: 500, queue: false });
-            $('footer:nth-of-type(1)').css('clip', 'rect(0px,' + sirinaFuter + 'px,' + visinaFooter + 'px,0px)')
+    if (proveraVrh(document.querySelector('footer:nth-of-type(1)'))&&footerAnimacija) {
+        $('footer:nth-of-type(2)').animate({ left: '0%', opacity: 1 }, 1700, function () {
+            $('footer').animate({ opacity: '1' }, { duration: 750, queue: false });
+            $('footer:nth-of-type(2)').css('clip', 'rect(0px,' + 2*sirinaFuter + 'px,' + 2*visinaFooter + 'px,0px)');
+            $('footer:nth-of-type(1)').addClass("d-none");
+            $('#footerPomoc').addClass('d-none');
         })
-        $('footer:nth-of-type(2)').animate({ left: '0%', opacity: 1 }, 1500);
+        $('#footerPomoc').animate({left: '0%'}, 1700);
+        $('footer:nth-of-type(1)').animate({ left: '0%', opacity: 1 }, 1700);
+        footerAnimacija = false;
     }
 }
 
