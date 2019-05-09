@@ -21,6 +21,11 @@
       font-size: 1.3em!important;
     }
   }*/
+  .vidljivo{
+    width: 100vw!important;
+    overflow-x: hidden;
+    background-color: black;
+  }
 a,a:hover{
     text-decoration: none;
     color: black;
@@ -234,15 +239,15 @@ footer .row:nth-of-type(3)  [class*='col-4 align-self']{
 }
 footer{
   width: 100%;
-  position: absolute;
   border-top: 3px solid gray;
   border-bottom: 2px solid black;
   font-size: 120%;
   opacity: .8;
+  position: absolute;
 }
 footer:nth-of-type(1){
-  left: -50%;
   z-index: 5;
+  left: -50%;
 }
 footer:nth-of-type(2){
   left: 50%;
