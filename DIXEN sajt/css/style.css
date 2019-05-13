@@ -33,20 +33,19 @@ body{
   overflow-x: hidden!important;
   background-image: url('../images/37diamond.jpg');
   background-attachment: fixed;
-
 }
 .btn{
     background-color: rgb(82, 80, 80);
     color: white;
     transition: all .4s;
 }
+.btn:hover{
+  color: white;
+  background-color: rgba(129, 15, 15, 0.801)
+}
 #vidljiv{
   overflow-x: hidden!important;
   max-width: 100vw!important;
-}
-.btn:hover{
-    color: white;
-    background-color: rgba(129, 15, 15, 0.801)
 }
 nav ul li  .active{
   border-top: 2px solid red;
@@ -59,30 +58,16 @@ nav ul li span{
 nav ul li span:hover{
   border-top: 2px solid red;
 }
-.navbar-brand{
-    padding: 0px;
-}
-#prlx2{
-    background-image: url("../images/37diamond.jpg");
-    background-attachment: fixed;
-    padding: 4% 0%;
-}
 .navbar{
-  padding: 0%;
   border-top: 2px solid black;
   border-bottom: 3px solid gray;
 }
 header{
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  background-color:white;
   z-index: 5;
 }
 header img{
-  width: 20%;
   transform: skewX(-20deg);
-  height: auto;
 }
 #prozor{
   background-attachment: fixed;
@@ -156,11 +141,14 @@ header img{
 }
 #prlx1 h2:first-of-type{
   position: relative;
-  left: -120%;
+  left: -120%;  
 }
 #prlx1 h2:nth-of-type(2){
   position: relative;
   left: 120%;
+}
+#prlx1 .row:nth-of-type(2) img, #prlx1 .row:nth-of-type(2) i{
+  cursor: pointer;
 }
 .zaobljeno{
   border-radius: 20px;

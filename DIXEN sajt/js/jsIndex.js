@@ -3,10 +3,10 @@ var sirinaFuter = parseInt($('footer').width());
 $('footer:nth-of-type(1)').css('clip', 'rect(0px,' + sirinaFuter / 2 + 'px,' + visinaFooter + 10 + 'px,0px)');
 $('#footerPomoc').height(visinaFooter+20);
 
-$('nav:nth-of-type(1)').removeClass('d-none');
+$('body>nav:nth-of-type(1)').removeClass('d-none');
 var visinaNavigacije = $('nav:nth-of-type(1)').css('height');
-$('nav:nth-of-type(1)').css('height', '0px');
-$('nav:nth-of-type(1)').hide();
+$('body>nav:nth-of-type(1)').css('height', '0px');
+$('body>nav:nth-of-type(1)').hide();
 $(document).ready(pocetak);
 function pocetak() {
     //PRORACUN SLAJDER
@@ -14,7 +14,7 @@ function pocetak() {
     $(window).resize(proracunSlider);
     //SLAJDER 
     var desno = true;
-    $('#desno').click(function () {
+    $('#levo').click(function () {
         if (desno) {
             $('.slides').css('left', -$('.slide').width() + 'px');
             $('.slides .slide:last-of-type').prependTo($('.slides'));
@@ -23,7 +23,7 @@ function pocetak() {
         }
     })
     var levo = true;
-    $('#levo').click(function () {
+    $('#desno').click(function () {
         if (levo) {
             $('.slides').animate({ left: -$('.slide').width() + "px" }, 500, postaviNulu);
             levo = false;
@@ -141,15 +141,15 @@ function skrolovanje() {
     if ($(window).width() > 768) {
         if (wScroll > 400) {
             if (animacijaNavigacija) {
-                $('nav:nth-of-type(1)').show();
-                $('nav:nth-of-type(1)').animate({ height: visinaNavigacije }, 400);
+                $('body>nav:nth-of-type(1)').show();
+                $('body>nav:nth-of-type(1)').animate({ height: visinaNavigacije }, 400);
                 animacijaNavigacija = false;
             }
         }
         else {
-            $('nav:nth-of-type(1)').css('height', '0px');
-            $('nav:nth-of-type(1)').stop();
-            $('nav:nth-of-type(1)').hide();
+            $('body>nav:nth-of-type(1)').css('height', '0px');
+            $('body>nav:nth-of-type(1)').stop();
+            $('body>nav:nth-of-type(1)').hide();
             animacijaNavigacija = true;
         }
     }

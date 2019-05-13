@@ -13,12 +13,15 @@
 </head>
 
 <body class="">
-    <header class="full-width">
-        <img class="img-fluid" src="images/asp_logo.png" alt="">
-        <img class="img-fluid" src="images/infinity.jpg" alt="">
-        <img class="img-fluid" src="images/Kitoko_Logo.jpg" alt="">
+    <header class="full-width d-none d-md-flex justify-content-around align-items-center">
+        <a class="w-25" href="https://asphair.com/home-page/"><img class="img-fluid" src="images/asp_logo.png"
+                alt="Asp logo"></a>
+        <a class="w-25" href="https://asphair.com/infiniti/"><img class="img-fluid" src="images/infinity.jpg"
+                alt="Infinity logo"></a>
+        <a class="w-25" href="https://asphair.com/kitoko/"><img class="img-fluid" src="images/Kitoko_Logo.jpg"
+                alt="Kitoko logo"></a>
     </header>
-    <nav class="navbar fixed-top navbar-expand-md bg-dark pl-5 pr-5 d-none" style="z-index:4">
+    <nav class="navbar p-0 fixed-top navbar-expand-md bg-dark pl-5 pr-5 d-none" style="z-index:4">
         <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item"><a class="nav-link text-center text-light" href="index.html"><span
                         class="active">Početna
@@ -35,8 +38,8 @@
         </ul>
     </nav>
 
-    <nav class="navbar  navbar-expand-md bg-light navbar-light pr-5 pl-5 m-0" style="z-index:5">
-        <a class="navbar-brand font-italic" href="#"><img src="images/g4523.png" width="140px" alt=""></a>
+    <nav class="navbar p-0 navbar-expand-md bg-light navbar-light pr-5 pl-5 m-0" style="z-index:5">
+        <a class="navbar-brand p-0 font-italic" href="#"><img src="images/g4523.png" width="140px" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -78,36 +81,39 @@
                         <div class="col-12 col-sm-6 col-md-3 mt-5 mb-5">
                             <div class="card">
                                 <div class="card-header bg-dark text-light">
-                                    <h4 class="font-italic ">Naslov 1</h4>
+                                    <h4 class="font-italic ">Infinity Regular</h4>
                                 </div>
                                 <div class="card-body bg-dark p-0"><img class="card-img-top"
-                                        src="images/popularni/1.png" alt="Card image" style="opacity:.6"></div>
+                                        src="images/proizvodi/boje/regular/REG.jpg" alt="infinity regular"
+                                        style="opacity:.6"></div>
                                 <div class="card-footer">
-                                    <a href="#" class="btn w-100">See Profile</a>
+                                    <div class="btn w-100" onclick="$('#regular').modal('show')">Pogledaj</div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3 mt-5 mb-5">
                             <div class="card">
                                 <div class="card-header bg-dark text-light">
-                                    <h4 class="font-italic ">Naslov 1</h4>
+                                    <h4 class="font-italic ">Kitoko Oil</h4>
                                 </div>
                                 <div class="card-body bg-dark p-0"><img class="card-img-top"
-                                        src="images/popularni/2.png" alt="Card image" style="opacity:.8"></div>
+                                        src="images/proizvodi/negastil/OIL_TREATMENT_10ml_115ml.png" alt="kitoko oil"
+                                        style="opacity:.8"></div>
                                 <div class="card-footer">
-                                    <a href="/galerija/imgs/slika11.gif" class="btn w-100">See Profile</a>
+                                    <div class="btn w-100" onclick="$('#kitokooil').modal('show')">Pogledaj</div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-3 mt-5 mb-5">
                             <div class="card">
                                 <div class="card-header bg-dark text-light">
-                                    <h4 class="font-italic ">Naslov 1</h4>
+                                    <h4 class="font-italic ">Converter</h4>
                                 </div>
                                 <div class="card-body bg-dark p-0"><img class="card-img-top"
-                                        src="images/popularni/6.png" alt="Card image" style="opacity:.9"></div>
+                                        src="images/proizvodi/hidrogenblans/ASP_CONVERTER_1000ml250ml.png"
+                                        alt="Card image" style="opacity:.9"></div>
                                 <div class="card-footer">
-                                    <a href="/galerija/imgs/slika11.gif" class="btn w-100">See Profile</a>
+                                    <div class="btn w-100" onclick="$('#converter').modal('show')">Pogledaj</div>
                                 </div>
                             </div>
                         </div>
@@ -123,49 +129,57 @@
                             <div class="slides">
                                 <div class="slide">
                                     <div class="card">
-                                        <img class="card-img-top img-fluid" src="images/popularni/1.png">
+                                        <img class="card-img-top img-fluid" onclick="$('#metalics').modal('show')"
+                                            src="images/proizvodi/boje/metalic/METALLICS.jpg" alt="Infinity Metalics">
                                         <div class="card-footer bg-dark">
-                                            <h4 class="card-title bg-dark">Boja</h4>
+                                            <h4 class="card-title bg-dark">Infinity Metalics</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide">
                                     <div class="card">
-                                        <img class="card-img-top img-fluid" src="images/popularni/2.png">
+                                        <img class="card-img-top img-fluid" onclick="$('#hidrogen').modal('show')"
+                                            src="images/proizvodi/hidrogenblans/ASP_CREME_DEVELOPER_3%_250.png"
+                                            alt="Creme Developer">
                                         <div class="card-footer bg-dark">
-                                            <h4 class="card-title bg-dark">Boja</h4>
+                                            <h4 class="card-title bg-dark">Creme Developer</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide">
                                     <div class="card">
-                                        <img class="card-img-top img-fluid" src="images/popularni/3.jpg">
+                                        <img class="card-img-top img-fluid" onclick="$('#blanslite').modal('show')"
+                                            src="images/proizvodi/hidrogenblans/ASP_LITE_BLUE_POWDER (1).png"
+                                            alt="Lite Blans">
                                         <div class="card-footer bg-dark">
-                                            <h4 class="card-title bg-dark">Boja</h4>
+                                            <h4 class="card-title bg-dark">Lite Blans</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide">
                                     <div class="card">
-                                        <img class="card-img-top img-fluid" src="images/popularni/4.png">
+                                        <img class="card-img-top img-fluid" src="images/proizvodi/negastil/PUSH_UP.jpg"
+                                            alt="Push Up Wax" onclick="$('#pushwax').modal('show')">
                                         <div class="card-footer bg-dark">
-                                            <h4 class="card-title bg-dark">Boja</h4>
+                                            <h4 class="card-title bg-dark">Push Up Wax</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide">
                                     <div class="card">
-                                        <img class="card-img-top img-fluid" src="images/popularni/5.png">
+                                        <img class="card-img-top img-fluid" src="images/proizvodi/boje/satin/SATIN.png"
+                                            alt="Infinity Satin" onclick="$('#satin').modal('show')">
                                         <div class="card-footer bg-dark">
-                                            <h4 class="card-title bg-dark">Boja</h4>
+                                            <h4 class="card-title bg-dark">Infinity Satin</h4>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide">
                                     <div class="card">
-                                        <img class="card-img-top img-fluid" src="images/popularni/6.png">
+                                        <img class="card-img-top img-fluid" onclick="$('#airloader').modal('show')"
+                                            src="images/proizvodi/negastil/AIR_LOADER-300x300.jpg" alt="Air Loader">
                                         <div class="card-footer bg-dark">
-                                            <h4 class="card-title bg-dark">Boja</h4>
+                                            <h4 class="card-title bg-dark">Air Loader</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -212,44 +226,44 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer1.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer1.jpg" alt="Musterija 1">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer2.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer2.jpg" alt="Musterija 2">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer3.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer3.jpg" alt="Musterija 3">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer4.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer4.jpg" alt="Musterija 4">
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer5.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer5.jpg" alt="Musterija 5">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer6.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer6.jpg" alt="Musterija 6">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer7.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer7.jpg" alt="Musterija 7">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="card">
-                                        <img class="card-img-top" src="images/primer8.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="images/primer8.jpg" alt="Musterija 8">
                                     </div>
                                 </div>
                             </div>
@@ -263,31 +277,45 @@
         <footer class="bg-dark text-center text-light font-italic font-weight-bold">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-sm-4 align-self-center">dixen@gmail.com</div>
-                    <div class="col-4 col-sm-2 col-md-2">
-                        <img class="img-fluid" src="images/g4523.png" alt="">
+                    <div class="col-12 col-sm-4 align-self-center"><a a class="text-light"
+                            href="mailto:dixen@gmail.com"> dixen@gmail.com</a>
                     </div>
-                    <div class="col-12 col-sm-4 align-self-center">064/1234-567</div>
+                    <div class="col-4 col-sm-2 col-md-2">
+                        <a href="index.html">
+                            <img class="img-fluid" src="images/g4523.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-4 align-self-center"><a a class="text-light"
+                            href="tel: 064/1234-567">064/1234-567</a></div>
                 </div>
                 <div class="row justify-content-around border-bottom">
-                    <div class="col-6 col-md-3 border">Pocetna</div>
-                    <div class="col-6 col-md-3 border">Kontakt</div>
-                    <div class="col-6 col-md-3 border">Proizvodi</div>
-                    <div class="col-6 col-md-3  border">Affinage official</div>
+                    <div class="col-6 col-md-3 border"><a class="text-light" href="index.html">Pocetna</a></div>
+                    <div class="col-6 col-md-3 border"><a class="text-light" href="kontakt.html">Kontakt</a></div>
+                    <div class="col-6 col-md-3 border"><a class="text-light" href="proizvodi.html">Proizvodi</a></div>
+                    <div class="col-6 col-md-3  border"><a class="text-light"
+                            href="https://asphair.com/home-page/">Affinage official</a></div>
                 </div>
                 <div class="row text-center justify-content-center p-3">
                     <div class="col-6 col-sm-4 col-md-3 border-bottom p-2">
                         <div class="okvirIkone">
-                            <i class="fab fa-facebook-f" style="color:blue"></i>
+                            <a href="https://www.facebook.com/affinageprofessional/">
+                                <i class="fab fa-facebook-f" style="color:blue"></i>
+                            </a>
                         </div>
                         <div class="okvirIkone">
-                            <i class="fab fa-instagram" style="color:#E1306C;"></i>
+                            <a href="https://www.instagram.com/affinageprofessional/">
+                                <i class="fab fa-instagram" style="color:#E1306C;"></i>
+                            </a>
                         </div>
                         <div class="okvirIkone">
-                            <i class="fab fa-twitter" style="color:lightskyblue"></i>
+                            <a href="https://twitter.com/Affinage_Hair">
+                                <i class="fab fa-twitter" style="color:lightskyblue"></i>
+                            </a>
                         </div>
                         <div class="okvirIkone">
-                            <i class="fab fa-youtube" style="color:red"></i>
+                            <a href="https://www.youtube.com/user/affinageprofessional">
+                                <i class="fab fa-youtube" style="color:red"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -298,35 +326,52 @@
                 </div>
             </div>
         </footer>
+
         <div id="footerPomoc" class="bg-light w-50"></div>
+
         <footer class="bg-dark text-center text-light font-italic font-weight-bold">
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-sm-4 align-self-center">dixen@gmail.com</div>
-                    <div class="col-4 col-sm-4 col-md-2">
-                        <img class="img-fluid" src="images/g4523.png" alt="">
+                    <div class="col-12 col-sm-4 align-self-center"><a class="text-light" href="mailto:dixen@gmail.com">
+                            dixen@gmail.com</a>
                     </div>
-                    <div class="col-12 col-sm-4 align-self-center">064/1234-567</div>
+                    <div class="col-4 col-sm-2 col-md-2">
+                        <a href="index.html">
+                            <img class="img-fluid" src="images/g4523.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-4 align-self-center"><a class="text-light"
+                            href="tel: 064/1234-567">064/1234-567</a></div>
                 </div>
                 <div class="row justify-content-around border-bottom">
-                    <div class="col-6 col-md-3 border">Pocetna</div>
-                    <div class="col-6 col-md-3 border">Kontakt</div>
-                    <div class="col-6 col-md-3 border">Proizvodi</div>
-                    <div class="col-6 col-md-3  border">Affinage official</div>
+                    <div class="col-6 col-md-3 border"><a class="text-light" href="index.html">Pocetna</a></div>
+                    <div class="col-6 col-md-3 border"><a class="text-light" href="kontakt.html">Kontakt</a></div>
+                    <div class="col-6 col-md-3 border"><a class="text-light" href="proizvodi.html">Proizvodi</a></div>
+                    <div class="col-6 col-md-3  border"><a class="text-light"
+                            href="https://asphair.com/home-page/">Affinage official</a>
+                    </div>
                 </div>
                 <div class="row text-center justify-content-center p-3">
                     <div class="col-6 col-sm-4 col-md-3 border-bottom p-2">
                         <div class="okvirIkone">
-                            <i class="fab fa-facebook-f" style="color:blue"></i>
+                            <a href="https://www.facebook.com/affinageprofessional/">
+                                <i class="fab fa-facebook-f" style="color:blue"></i>
+                            </a>
                         </div>
                         <div class="okvirIkone">
-                            <i class="fab fa-instagram" style="color:#E1306C;"></i>
+                            <a href="https://www.instagram.com/affinageprofessional/">
+                                <i class="fab fa-instagram" style="color:#E1306C;"></i>
+                            </a>
                         </div>
                         <div class="okvirIkone">
-                            <i class="fab fa-twitter" style="color:lightskyblue"></i>
+                            <a href="https://twitter.com/Affinage_Hair">
+                                <i class="fab fa-twitter" style="color:lightskyblue"></i>
+                            </a>
                         </div>
                         <div class="okvirIkone">
-                            <i class="fab fa-youtube" style="color:red"></i>
+                            <a href="https://www.youtube.com/user/affinageprofessional">
+                                <i class="fab fa-youtube" style="color:red"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -340,8 +385,966 @@
     </div>
 
 
+    <div class="modal fade" id="regular" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Infinity Regular</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-8 col-md-5">
+                                <img class="img-fluid img-thumbnail" src="images/proizvodi/boje/regular/REG.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-md-5">OTKRIJTE BOJU KOJA PAZI</h5>
+                                <br>
+                                <p>
+                                    Napredna formula sa DATEM PLUS® Technology.
+                                    Bezbedno transportuje dugotrajne pigmente u boji duboko u svaki pramen,
+                                    obezbeđujući
+                                    neverovatnu boju i besprekornu 100% grey coverage.
+                                    Gipkost i neverovatan sjaj za kosu lepog i zdravijeg izgleda.
+                                </p>
+                                <p class="font-italic text-primary">
+                                    Cena: 600 dinara <br>
+                                    Pakovanje: 100ml
+                                </p>
+                            </div>
+                        </div>
+                        <h4 class="pl-4 mt-4">Nijanse boje: </h4>
+                        <nav id="navbar-example2" class="navbar navbar-light bg-light w-100 ">
+                            <ul class="nav nav-pills w-100 justify-content-start align-items-center text-center">
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link active" href="#prirodner">Prirodne</a>
+                                </li>
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link" href="#hladnesuve">Hladne & Suve</a>
+                                </li>
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link" href="#soficistirane">Soficistirane</a>
+                                </li>
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link" href="#tople">Tople</a>
+                                </li>
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link" href="#izrazajne">Izrazajne</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="row mt-3 viseboja pb-5" data-spy="scroll" data-target="#navbar-example2"
+                            data-offset="0">
+
+                            <h5 class="w-100 text-center mt-2 mb-3" id="prirodner">Prirodne</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">1.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/1.0.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">2.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/2.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">3.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/3.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">4.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/4.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">4.00</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/4.00.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">4.01</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/4.01.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">5.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/5.0.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">6.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/6.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">6.00</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/6.00.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">6.01</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/6.01.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">7.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/7.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">7.00</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/7.00.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">7.01</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/7.01.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">8.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/8.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">8.00</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/8.00.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">8.01</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/8.01.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">9.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/9.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">9.00</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/9.00.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">9.01</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/9.01.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">10.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/10.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">10.21</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/prirodna/10.21.jpg" alt="">
+                            </div>
+
+                            <h5 class="w-100 text-center mt-2 mb-2" id="hladnesuve">Hladne & Suve</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">2.2</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/2.2.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">4.22</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/4.22.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">6.22</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/6.22.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">7.1</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/7.1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">8.2</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/8.2.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">9.1</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/9.1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">9.2</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/9.2.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">10.1</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/10.1.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">10.2</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/hladno/10.2.jpg" alt="">
+                            </div>
+
+                            <h5 class="w-100 text-center mt-2 mb-2" id="soficistirane">Soficistirane</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">4.24</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/4.24.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">6.3</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/6.3.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">6.33</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/6.33.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">8.3</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/8.3.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">9.035</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/9.035.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">9.3</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/9.3.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">10.3</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/10.3.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">10.32</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/soficistirane/10.32.jpg"
+                                    alt="">
+                            </div>
+
+                            <h5 class="w-100 text-center mt-2 mb-2" id="tople">Tople</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">5.35</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/toplo/5.35.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">7.43</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/toplo/7.43.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">8.43</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/toplo/8.43.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">8.44</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/toplo/8.44.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">9.145</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/toplo/9.145.jpg" alt="">
+                            </div>
+
+                            <h5 class="w-100 text-center mt-2 mb-2" id="izrazajne">Izrazajne</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">1.7</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/1.7.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">3.76</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/3.76.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">5.66</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/5.66.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">5.727</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/5.727.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">6.61</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/6.61.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">6.66</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/6.66.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">7.62</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/7.62.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">7.66</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/7.66.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">9.026</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/regular/izrazajne/9.026.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Infinity Regular</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="kitokooil" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Kitoko Oil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-8 col-md-5">
+                                <img class="img-fluid img-thumbnail"
+                                    src="images/proizvodi/negastil/OIL_TREATMENT_10ml_115ml.png" alt="">
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-5">INTENZIVNA PREHRANA ZA SVE VRSTE KOSE.
+                                </h5>
+                                <br>
+                                <p>
+                                    Karite & Argan Oil se kombinuju kako bi popravili, revitalizovali i ojačali,
+                                    ostavljajući kosu
+                                    bestežinski transformisanu, ultra glatku i predivno blistavu.
+                                </p>
+                                <div class="row">
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 800 dinara <br>
+                                        Pakovanje: 115ml
+                                    </p>
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 1200 dinara <br>
+                                        Pakovanje: 12 x 10ml
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <h5></h5>
+                            </div>
+                            <div class="col-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Kitoko Oil</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="converter" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Converter</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-10 col-md-5">
+                                <div id="converterSlider" class="carousel slide w-100" data-ride="carousel">
+                                    <div class="carousel-inner w-100 d-flex">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_CONVERTER_1000ml.png"
+                                                alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_CONVERTER_1000ml250ml.png"
+                                                alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/CONVERTER_LOGO-01.png" alt="">
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev bg-dark" href="#converterSlider" role="button"
+                                        data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next bg-dark" href="#converterSlider" role="button"
+                                        data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-5">
+                                    JEDINSTVENI KONVERZIJSKI KONCEPT KOJI PROMENI BILO KOJU STALNU
+                                    BOJU KOSE U "TONE ON TONE".</h5>
+                                <br>
+                                <p>
+                                    Sada možete da dobijete ili trajno bojanje ili "ton na ton" bez potrebe za
+                                    posedovanjem
+                                    oba proizvoda, smanjujući vrednost proizvoda uštedećete novac. Čak i ako
+                                    već imate raspon tonova u boji, Converter će proširiti vašu paletu
+                                    omogućavajući vam da koristite druge nijanse iz vašeg postojećeg stalnog opsega.
+                                </p>
+                                <div class="row">
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 1800 dinara <br>
+                                        Pakovanje: 1000ml
+                                    </p>
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 600 dinara <br>
+                                        Pakovanje: 250ml
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <h5>Dodatan opis: </h5>
+                            </div>
+                            <div class="col-12">
+
+                                Konvertor je idealna prilika za salone koji ne koriste 'ton na ton' proizvod da ponude
+                                svojim klijentima novu uslugu. Takođe nudi klijentu idealnu progresiju od tona
+                                boje u trajnom tonu sa istom nijansom.
+                                Potrebno je samo 20-25 minuta razvoja bilo koje boje.
+                                Ostavlja kosu sjajnom,sa dugotrajnom bojom koja prekriva više od 50% sive boje.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Converter</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="metalics" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Infinity Metalics</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-8 col-md-5">
+                                <img class="img-fluid img-thumbnail" src="images/proizvodi/boje/metalic/METALLICS.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-md-5">8 BOJA ZA NEVEROVATAN METALIC EFEKAT</h3>
+                                    <br>
+                                    <p>
+                                        Napredna formula sa DATEM PLUS® Technology, Shea Butter i Argan
+                                        Oil obezbeđuje prelepe rezultate sa nevetovatnim sjajem
+                                        i zdravijim izgledom kose.
+                                    </p>
+                                    <p class="font-italic text-primary">
+                                        Cena: 600 dinara <br>
+                                        Pakovanje: 100ml
+                                    </p>
+                            </div>
+                        </div>
+                        <h4 class="pl-4 mt-4">Nijanse boje: </h4>
+                        <div class="row mt-3">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">Biserna</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Pearl.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">Bronza</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Bronzed_Amber.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">Biserna Roze</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Pearl_Rose.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">Bakar Roze</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Copper_Rose.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">Sivo Roze</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Grey_Rose.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">Mahagoni Ljubicasta</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Mahogany_Violet.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">Svetlo Ljubicasta</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Light_Violet.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">Svetlo Plava</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/metalic/Light_Blue.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Infinity Metalics</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="hidrogen" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Hidrogen / Creme Developer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2 mb-5">
+                            <div class="col-10 col-md-5">
+                                <div id="infinitySlider" class="carousel slide w-100" data-ride="carousel">
+                                    <div class="carousel-inner w-100 d-flex">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="images/proizvodi/hidrogenblans/hidrogen.jpg"
+                                                alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_CREME_DEVELOPER_3%_250.png"
+                                                alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_CREME_DEVELOPER_6%_250.png"
+                                                alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_CREME_DEVELOPER_9%_250.png"
+                                                alt="">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_CREME_DEVELOPER_12%_250.png"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev bg-dark" href="#infinitySlider" role="button"
+                                        data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next bg-dark" href="#infinitySlider" role="button"
+                                        data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-5">
+                                    Creme Developer poboljšava product osobine drugih proizvoda kao i stanje kose
+                                </h5>
+                                <br>
+                                <p>
+                                    ASP Creme Developer ima visoke performanse, niska pH
+                                    formula za kondicioniranje, dostupna u 4 jačine za sve boje
+                                    potrebe.
+                                </p>
+                                <div class="row">
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 1800 dinara <br>
+                                        Pakovanje: 1000ml
+                                    </p>
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 600 dinara <br>
+                                        Pakovanje: 250ml
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Hidrogen / Creme Developer</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blanslite" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Lite</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-10 col-md-5">
+                                <div id="blansliteSlider" class="carousel slide w-100" data-ride="carousel">
+                                    <div class="carousel-inner w-100 d-flex">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_LITE_BLUE_POWDER (1).png"
+                                                alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/ASP_LITE_WHITE_POWDER.png"
+                                                alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100"
+                                                src="images/proizvodi/hidrogenblans/LITE_LOGO-01.png" alt="">
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev bg-dark" href="#blansliteSlider" role="button"
+                                        data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next bg-dark" href="#blansliteSlider" role="button"
+                                        data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-5">
+                                    VISOKE PERFORMANSE, DUST FREE PUDER IZBELJIVAČ
+                                </h5>
+                                <br>
+                                <p>
+                                    Lite je izbeljivač visokih performansi, pogodan za upotrebu sa svim
+                                    tehnikama naglašavanja. Blaga formulacija se može
+                                    koristiti sa 3% (10vol), 6% (20vol), 9% (30vol) i 12% (40vol) hidrogenom.
+                                    Može se postići do 6-7 nivoa podizanja, u zavisnosti od osnovne boje.
+                                </p>
+                                <div class="row">
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 1800 dinara <br>
+                                        Pakovanje: 1000ml
+                                    </p>
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 600 dinara <br>
+                                        Pakovanje: 250ml
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <h5>Dodatan opis: </h5>
+                            </div>
+                            <div class="col-12">
+                                Lite sadrži gumu koja pomaže u zaštiti kose i hidrolizovanu svilu radi zaštite
+                                zanoktica. Lite je dostupan u plavom i belom prahu. Za najbolje
+                                rezultate koriste Affinage Creme Developer. Za upotrebu na skalpovima preporučujemo da
+                                samo 3% (10vol)
+                                ili 6% (20vol).
+                                <ul>
+                                    <li>
+                                        Još brže delovanje - štedi dragoceno vreme
+                                    </li>
+                                    <li>
+                                        Čist i jednostavan za upotrebu - ne spada niti se ljušti
+                                    </li>
+                                    <li>
+                                        Nežno delovanje - čuva stanje kose
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Lite</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="pushwax" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Push Up Wax</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-8 col-md-5">
+                                <img class="img-fluid img-thumbnail" src="images/proizvodi/negastil/PUSH_UP.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-5">SJANI GEL ZA KOSU.
+                                </h5>
+                                <br>
+                                <p>
+                                    PUSH UP stvara držanje i sjaj, za glatke, neuredne i šiljate efekte koji
+                                    ostaju, fleksibilan do kraja.
+                                </p>
+                                <div class="row">
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 1900 dinara <br>
+                                        Pakovanje: 1000ml
+                                    </p>
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 700 dinara <br>
+                                        Pakovanje: 300ml
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <h5></h5>
+                            </div>
+                            <div class="col-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Push Up Wax</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <div class="modal fade" id="satin" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Infinity Satin</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-8 col-md-5">
+                                <img class="img-fluid img-thumbnail" src="images/proizvodi/boje/satin/SATIN.png" alt="">
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-md-5">TONE ON TONE BOJA</h3>
+                                    <br>
+                                    <p>
+                                        Idealan uvod u za prvo farbanje i idelne za osobe koje ne žele stalne boje.
+                                        Satin se postepeno ispita sa minimalnim ponovnim rastom.Krema za kondicioniranje
+                                        bez amonijaka neguje kosu
+                                        pruža neverovatnu reflektujuću boju.
+                                    </p>
+                                    <p class="font-italic text-primary">
+                                        Cena: 600 dinara <br>
+                                        Pakovanje: 60ml
+                                    </p>
+                            </div>
+                        </div>
+                        <h4 class="pl-4 mt-4">Nijanse boje: </h4>
+                        <nav id="navbar-example2" class="navbar navbar-light bg-light w-100 ">
+                            <ul class="nav nav-pills w-100 justify-content-center align-items-center text-center">
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link active" href="#prirodne">Prirodne</a>
+                                </li>
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link" href="#crvenabakar">Crvena & Bakar</a>
+                                </li>
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link" href="#kafa">Kafa</a>
+                                </li>
+                                <li class="nav-item col-12 col-sm-6 col-md-3 mt-1">
+                                    <a class="nav-link" href="#zlatnabez">Zlatna & Bež</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="row mt-3 viseboja pb-5" data-spy="scroll" data-target="#navbar-example2"
+                            data-offset="0">
+
+                            <h5 class="w-100 text-center mt-2 mb-3" id="prirodne">Prirodne</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">.000</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/000.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">2.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/2.0.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">4.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/4.0.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">5.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/5.0.jpg" alt="">
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">6.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/6.0.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">7.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/7.0.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">8.0</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/8.0.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">9.00</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/prirodna/9.00.jpg" alt="">
+                            </div>
+
+                            <h5 class="w-100 text-center mt-2 mb-2" id="crvenabakar">Crvena & Bakar</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75 text-center">4.65</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/crvenabakar/4.65.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">5.4</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/crvenabakar/5.4.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">6.65</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/crvenabakar/6.65.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">7.4</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/crvenabakar/7.4.jpg" alt="">
+                            </div>
+
+                            <h5 class="w-100 text-center mt-2 mb-2" id="kafa">Kafa</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">5.036</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/kafa/5.036.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">6.036</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/kafa/6.036.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">7.036</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/kafa/7.036.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">9.035</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/kafa/9.035.jpg" alt="">
+                            </div>
+
+                            <h5 class="w-100 text-center mt-2 mb-2" id="zlatnabez">Zlatna & Bež</h5>
+
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">7.3</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/zlatnabez/7.3.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">8.31</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/zlatnabez/8.31.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">8.32</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/zlatnabez/8.32.jpg" alt="">
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 bojaokvir mb-2">
+                                <div class="imeboje text-light w-75">9.23</div>
+                                <img class="img-fluid" src="images/proizvodi/boje/satin/zlatnabez/9.23.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Infinity Satin</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="airloader" tabindex="-1" role="dialog" aria-labelledby="bred" aria-hidden="true">
+        <div class="modal-dialog big-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-light  font-italic text-center w-100">Air-Loader</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="text-light" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center pl-md-2">
+                            <div class="col-8 col-md-5">
+                                <img class="img-fluid img-thumbnail"
+                                    src="images/proizvodi/negastil/AIR_LOADER-300x300.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-sm-10 col-md-6">
+                                <h5 class="text-danger mt-5">ULTRA JAK HAIRSPRAY
+                                </h5>
+                                <br>
+                                <p>
+                                    AIR LOADER se brzo suši da osigura svaki stil sa ultra-snažnim, dugotrajnim
+                                    držanjem.
+                                    Vitamin B5 hrani i pojačava sjaj.
+                                </p>
+                                <div class="row">
+                                    <p class="col-6 font-italic text-primary">
+                                        Cena: 800 dinara <br>
+                                        Pakovanje: 300ml
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <h5></h5>
+                            </div>
+                            <div class="col-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center bg-dark text-light">
+                    <h5 class="w-100 font-italic">Air-Loader</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js">
@@ -350,6 +1353,30 @@
     <script src="js/bootstrap.min.js">
     </script>
     <script src="js/jsIndex.js"></script>
+
+    <script>
+        var stara;
+        $('.bojaokvir').hover(function () {
+            putanja = $(this).find('img').attr('src');
+            stara = $(this).parent().parent().find('.img-thumbnail').attr('src');
+            $(this).parent().parent().find('.img-thumbnail').attr('src', putanja)
+        }, function () {
+            $(this).parent().parent().find('.img-thumbnail').attr('src', stara)
+        })
+        $(document).ready(visinaScrollSpy)
+        $(window).resize(visinaScrollSpy)
+        function visinaScrollSpy() {
+            if ($(window).width() < 576)
+                $('.viseboja').css('height', '70vw');
+            else if ($(window).width() <= 768 && $(window).width() > 576)
+                $('.viseboja').css('height', '60vw');
+            else if ($(window).width() <= 992 && $(window).width() > 768)
+                $('.viseboja').css('height', '50vw');
+            else {
+                $('.viseboja').css('height', '15vw');
+            }
+        }
+    </script>
 
 </body>
 
