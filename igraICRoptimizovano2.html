@@ -196,6 +196,13 @@
                 kontrolaX = parseInt($('#kontrola').position().left);
             }
         });
+        $('#okvir').on("touchmove",(function (e) {
+            e.preventDefault();
+            var currentX = e.originalEvent.touches ?  e.originalEvent.touches[0].pageX : e.pageX;
+            $('#kontrola').css('left', currentX - okvirX - kontrolaSirina / 2);
+            kontrolaX = parseInt($('#kontrola').position().left);
+        }));
+        
     </script>
 </body>
 </html>
