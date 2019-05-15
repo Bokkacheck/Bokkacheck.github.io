@@ -12,7 +12,6 @@
             padding: 0;
             margin: 0;
         }
-
         #ekran {
             padding-top: 20px;
             width: 60vw;
@@ -20,7 +19,6 @@
             margin: 0 auto;
             background-color: lightgray;
         }
-
         #okvir {
             background-color: black;
             margin: 20px auto;
@@ -28,7 +26,6 @@
             height: 70vh;
             position: relative;
         }
-
         #okvir div {
             position: absolute;
             width: 8%;
@@ -37,7 +34,6 @@
             text-align: center;
             padding: 2px;
         }
-
         #lopta {
             background-color: red;
             border-radius: 50%;
@@ -46,16 +42,28 @@
             left: 48%;
             z-index: 5;
         }
-
         #kontrola {
             background-color: lightslategrey;
             height: 3% !important;
             bottom: 2%;
             left: 40%;
         }
-
         #okvir div[id*="deo"]:hover {
             border: 1px solid blue;
+        }
+        @media screen and (max-width:992px){
+            #ekran{
+                width: 100vw!important;
+            }
+            #okvir{
+                height: 90vh!important;
+            }
+            #kontrola{
+                bottom: 20%!important;
+            }
+            #lopta{
+                bottom: 23%!important;
+            }
         }
     </style>
 </head>
