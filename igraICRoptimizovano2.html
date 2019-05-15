@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        #ekran {
+            padding-top: 20px;
+            width: 60vw;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: lightgray;
+        }
+
+        #okvir {
+            background-color: black;
+            margin: 20px auto;
+            width: 80%;
+            height: 70vh;
+            position: relative;
+        }
+
+        #okvir div {
+            position: absolute;
+            width: 8%;
+            height: 8%;
+            border: 1px solid white;
+            text-align: center;
+            padding: 2px;
+        }
+
+        #lopta {
+            background-color: red;
+            border-radius: 50%;
+            bottom: 5%;
+            width: 4% !important;
+            left: 48%;
+            z-index: 5;
+        }
+
+        #kontrola {
+            background-color: lightslategrey;
+            height: 3% !important;
+            bottom: 2%;
+            left: 40%;
+        }
+
+        #okvir div[id*="deo"]:hover {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ekran">
+        <div id="okvir">
+            <div id="lopta"></div>
+            <div id="kontrola"></div>
+        </div>
+        <div id="komande">
+            <div id=""></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js">
+    </script>
+    <script>                                               
+        var nivo = 0;
+        var startovano = false;
+        var velicina = $('#lopta').width();
+        $('#lopta').height(velicina);
+        var brojLopti;
+        var visinaDeo;
+        var sirinaDeo;
+        kreirajPolja();
+        function kreirajPolja() {
+            var $okvir = $('#okvir');
+            brojLopti = 0;
+            sirinaDeo = ($okvir.width() * 0.1);
+            visinaDeo = ($okvir.height() * 0.1);
+            for (var i = 0; i < 4; i++) {
+                for (var j = 0; j < 10; j++) {
+                    if((i+j)% 4 == 0){
+                        $okvir.append("<div id = '" + "deo" + (brojLopti++) + "' style = 'background-color:blue; ;top:" + (i * visinaDeo + 2) + "px ; left:" + (j * sirinaDeo + 2) + "px;)'></div>");
+                        $okvir.append("<div id = '" + "deo" + (brojLopti++) + "'  style = 'background-color:red; ;top:" + (i * visinaDeo + 2) + "px ; left:" + (j * sirinaDeo + 2) + "px;)'></div>");
+                    }
+                    else{
+                        $okvir.append("<div id = '" + "deo" + (brojLopti++) + "' style = 'background-color:blue; ;top:" + (i * visinaDeo + 2) + "px ; left:" + (j * sirinaDeo + 2) + "px;)'></div>");
+                    }
+                }
+            }
+            start();
+            return;
+        }
+        var interval;
+        function start(pozvao) {
+            interval = setInterval(igra,15);
+            return;
+        }
+        var pomerajX = 0;
+        var pomerajY = -5;
+        var pozY = parseInt($('#lopta').css('top'));
+        var pozX = parseInt($('#lopta').css('left'));
+        var kontrolaY = parseInt($('#kontrola').position().top);
+        var kontrolaX = parseInt($('#kontrola').position().left);
+        $('#kontrola').width($('#okvir').width()/7);
+        var kontrolaSirina = $('#kontrola').width();
+        var okvirSirina = $('#okvir').width();
+        var deoX;
+        var deoY;
+        function igra() {
+            if (pozX <= 0) {
+                pozX = 0;
+                pomerajX = -pomerajX;
+            }
+            else if (pozX + velicina >= okvirSirina) {
+                pozX = okvirSirina - velicina;
+                pomerajX = -pomerajX;
+            }
+            if (pozY + pomerajY <= 0) {
+                pozY = 0;
+                pomerajY = -pomerajY;
+            }
+            else if (pozY + velicina >= kontrolaY) {
+                pozY = kontrolaY - velicina;
+                pomerajY = -pomerajY;
+                if (pozX + velicina + Math.abs(pomerajX) >= kontrolaX && pozX - Math.abs(pomerajX) <= kontrolaX + kontrolaSirina) {
+                    pomerajX = Math.min(((pozX + velicina / 2 - (kontrolaX + kontrolaSirina / 2)) / (kontrolaSirina / 2)) * Math.abs(pomerajY),Math.abs(pomerajY) );
+                }
+                else {
+                    alert("IZGUBILI STE")
+                    clearInterval(interval);
+                    document.location.reload();
+                    return;
+                }
+            }
+            var $okvir = $('#okvir div[id*=deo]');
+            for (var i = brojLopti - 1; i >= 0; i--) {
+                var deoX = parseInt($okvir.eq(i).position().left);
+                var deoY = parseInt($okvir.eq(i).position().top);
+                if (pozX + velicina >= deoX && pozX + velicina / 2 <= deoX + sirinaDeo && pozY + velicina / 2 <= deoY + visinaDeo && pozY + velicina / 2 >= deoY) {
+                    if (pozY + velicina / 2 <= deoY + visinaDeo && pozY - velicina / 2 >= deoY && pozX <= deoX - velicina / 2 || deoX + sirinaDeo < pozX + velicina / 2) {
+                        if (pomerajX < 0) {
+                            pozX = deoX + sirinaDeo;
+                        }
+                        else {
+                            pozX = deoX - velicina;
+                        }
+                        pomerajX = -pomerajX;
+                        $okvir.eq(i).remove();
+                        brojLopti--;
+                        break;
+                    }
+                    else {
+                        if (pomerajY <= 0) {
+                            pozY = deoY + visinaDeo;
+                        }
+                        else {
+                            pozY = deoY - velicina;
+                        }
+                        pomerajY = -pomerajY;
+                        $okvir.eq(i).remove();
+                        brojLopti--;
+                        break;
+                    }
+                }
+            }
+            if (brojLopti == 0) {
+                clearInterval(interval);
+                alert("PRESLI STE IGRU");
+                $('#kontrola').width($('#okvir').width()/10);
+                kontrolaSirina = $('#kontrola').width();
+                pozY = kontrolaY-velicina-10;
+                pozX = kontrolaX+kontrolaSirina/2;
+                pomerajY = - (Math.abs(pomerajY)+5);
+                kreirajPolja();
+                return;
+            }
+            $('#lopta').css('top', pozY);
+            $('#lopta').css('left', pozX);
+            pozX += pomerajX;
+            pozY += pomerajY;
+        }
+        var okvirX = $('#okvir').offset().left;
+        $('#okvir').mousemove(function (e) {
+            if (e.target.id != 'kontrola') {
+                $('#kontrola').css('left', e.pageX - okvirX - kontrolaSirina / 2);
+                kontrolaX = parseInt($('#kontrola').position().left);
+            }
+        });
+    </script>
+</body>
+</html>
