@@ -7,126 +7,134 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
+        @media screen and (max-width:992px) {
+            #okvir {
+                width: 90% !important;
+            }
+            #kontrola {
+                bottom: 20% !important;
+            }
+            #lopta {
+                bottom: 30% !important;
+            }
         }
-
-        #ekran {
-            padding-top: 20px;
-            width: 60vw;
-            height: 100vh;
-            margin: 0 auto;
-            background-color: lightgray;
-        }
-
         #okvir {
             background-color: black;
             margin: 0px auto;
-            width: 80%;
-            height: 95%;
+            width: 70%;
+            height: 95vh;
             position: relative;
         }
-
         #okvir div {
             position: absolute;
-            width: 10%;
-            height: 10%;
         }
-
         #lopta {
             background-color: red;
             border-radius: 50%;
             bottom: 5%;
+            left: 47%;
             width: 30px !important;
             height: 30px !important;
-            z-index: 5;
+            z-index: 999;
         }
-
         #kontrola {
-            background-image:
-                linear-gradient(to right,
-                lightslategray,
-                lightslategray 50%,
-                darkslategray 50%,
-                darkslategray
-                );
+            background-image: linear-gradient(to right, lightslategray, lightslategray 50%, darkslategray 50%, darkslategray);
             height: 3% !important;
+            width: 25%;
             bottom: 2%;
             left: 40%;
         }
     </style>
 </head>
 
-<body>
-    <div id="ekran">
-        <div id="okvir">
-            <div id="lopta"></div>
-            <div id="kontrola"></div>
-        </div>
-        <div id="komande">
-            <div id=""></div>
-        </div>
+<body
+    style="background-image: linear-gradient(to right, lightslategray, lightslategray 50%, darkslategray 50%, darkslategray);">
+    <div id="okvir">
+        <div id="lopta"></div>
+        <div id="kontrola"></div>
     </div>
     <script src="https://code.jquery.com/jquery.js">
     </script>
     <script>
         $('body').one('click', pocetak);
+        var nivo = 5;
         function pocetak() {
             var velicina = $('#lopta').width();
-            $('#lopta').css('top', parseInt($('#kontrola').position().top) + 10 - parseInt(($('#kontrola').position().top) % 10 + 50));
-            $('#lopta').css('left', parseInt($('#kontrola').position().left) + 10 - parseInt(($('#kontrola').position().left) % 10));
-            var pozY = parseInt($('#lopta').css('top')) + 10 - parseInt($('#lopta').css('top')) % 10;
-            var pozX = parseInt($('#lopta').css('left')) + 10 - parseInt($('#lopta').css('left')) % 10;
+            var kontrolaY = parseInt($('#kontrola').position().top);
+            $('#kontrola').css('top', kontrolaY - kontrolaY % 10);
+            kontrolaY = parseInt($('#kontrola').css('top'));
+            $('#lopta').css('top',kontrolaY-velicina-10);
+            $('#lopta').css('left', parseInt($('#kontrola').position().left) - parseInt(($('#kontrola').position().left) % 10));
+            var pozY = parseInt($('#lopta').css('top'));
+            var pozX = parseInt($('#lopta').css('left')) - parseInt($('#lopta').css('left')) % 10;
+            if (pozX < 0) pozX = velicina;
             var brojLopti = 0;
-            $('#okvir').height($('#okvir').height() + 10 - $('#okvir').height() % 10);
-            var okvirSirina = $('#okvir').width() + 10 - $('#okvir').width() % 10;
+            $('#okvir').height($('#okvir').height() - $('#okvir').height() % 10);
+            var okvirSirina = $('#okvir').width() - $('#okvir').width() % 10;
             $('#okvir').width(okvirSirina);
             var visinaDeo = parseInt($('#okvir').height() * 0.1) - parseInt($('#okvir').height() * 0.1) % 10 - 10;
             var sirinaDeo = parseInt($('#okvir').width() * 0.1) - parseInt($('#okvir').width() * 0.1) % 10 - 10;
-            var pomerajX = 5;
-            var pomerajY = 5;
+            var pomerajX = 0;
+            var pomerajY = nivo;
             var okvirX = parseInt($('#okvir').offset().left);
-            var kontrolaY = parseInt($('#kontrola').position().top);
-            $('#kontrola').css('top', kontrolaY + 10 - kontrolaY % 10);
-            kontrolaY = parseInt($('#kontrola').css('top'));
             var kontrolaX = parseInt($('#kontrola').position().left);
-            $('#kontrola').width(okvirSirina / 5);
+            $('#kontrola').width(okvirSirina / 4);
             var kontrolaSirina = $('#kontrola').width();
+
+            $('#okvir').on("touchmove", (function (e) {
+                e.preventDefault();
+                var pravoX = e.originalEvent.touches ? e.originalEvent.touches[0].pageX : e.pageX;
+                $('#kontrola').css('left', pravoX - okvirX - kontrolaSirina / 2);
+                kontrolaX = parseInt($('#kontrola').position().left);
+            }));
+
             $('#okvir').mousemove(function (e) {
                 if (e.target.id != 'kontrola') {
                     $('#kontrola').css('left', e.pageX - okvirX - kontrolaSirina / 2);
                     kontrolaX = parseInt($('#kontrola').position().left);
                 }
             });
-            kreirajPolja();
-            function kreirajPolja() {
-                for (var i = 0; i < 4; i++) {
+
+            (function kreirajPolja() {
+                for (var i = 0; i < 3; i++) {
                     for (var j = 0; j < 10; j++) {
-                        $('#okvir').append("<div class = 'deo' style = 'background-color: rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ");top:" + ((i * visinaDeo) + 10 - (i * visinaDeo) % 10 + (i * velicina + 10)) + "px ; left:" + (j * (sirinaDeo + 10)) + "px;)'></div>");
-                        brojLopti++;
+                        if (i < j || i < 7 - j) {
+                            var boja = "blue"
+                            if (brojLopti % 2 == 0) boja = "yellow";
+                            $('#okvir').append("<div class = 'deo' style = 'background-color:" + boja + " ;top:" + (i * (visinaDeo + velicina) + 10) + "px ; left:" + (j * (sirinaDeo + 10) + 10) + "px;)'></div>");
+                            brojLopti++;
+                        }
                     }
                 }
                 $('#okvir div[class*=deo]').width(sirinaDeo);
                 $('#okvir div[class*=deo]').height(visinaDeo);
-            }
+            })()
             var interval = setInterval(igra, 15);
-            var deoX;
-            var deoY;
             function igra() {
                 if (pozX == 0 || pozX + velicina == okvirSirina) {
                     pomerajX = -pomerajX;
                 }
-                if (pozY == 0 || (pozY + velicina == kontrolaY && pozX + 2 * velicina >= kontrolaX && pozX - velicina <= kontrolaX + kontrolaSirina)) {
-                    if (pozY != 0 && pozX+velicina/2 > kontrolaX + kontrolaSirina / 2 + Math.abs(pomerajX)*2 && pozX + velicina != okvirSirina) {
-                        pomerajX = 5;
+                if (pozY == 0) {
+                    pomerajY = -pomerajY;
+                }
+                else if ((pozY + velicina == kontrolaY && pozX + velicina >= kontrolaX && pozX <= kontrolaX + kontrolaSirina)) {
+                    if (pozX + velicina / 2 <= kontrolaX + kontrolaSirina / 4 && pozX != 0) {
+                        pomerajX = -nivo;
                     }
-                    else if(pozY!=0 && pozX + velicina/2 >= kontrolaX+kontrolaSirina/2 - Math.abs(pomerajX)*2&& pozY!=0 && pozX + velicina/2 <= kontrolaX+kontrolaSirina/2 + Math.abs(pomerajX)*2 ){
+                    else if (pozX + velicina / 2 < kontrolaX + kontrolaSirina / 2 - velicina) {
+                        pomerajX = -parseInt(nivo / 2);
+                    }
+                    else if (pozX + velicina / 2 <= kontrolaX + kontrolaSirina / 2 + velicina) {
                         pomerajX = 0;
                     }
-                    else if (pozY != 0 && pozX != 0) {
-                        pomerajX = -5
+                    else if (pozX + velicina / 2 <= kontrolaX + kontrolaSirina * 3 / 4.0 + velicina / 2) {
+                        pomerajX = parseInt(nivo / 2);
                     }
+                    else if (pozX + velicina != okvirSirina) {
+                        pomerajX = nivo;
+                    }
+                    if (pomerajX != 0)
+                        pozX = pozX <= okvirSirina / 2 ? pozX + Math.abs(pomerajX) - pozX % Math.abs(pomerajX) : pozX - pozX % Math.abs(pomerajX);
                     pomerajY = -pomerajY;
                 }
                 var $okvirDeo = $('#okvir div[class*=deo]');
@@ -137,19 +145,21 @@
                     var deoY = parseInt($okvirDeo.eq(i).position().top);
                     var isti = false;
                     if ((pozX + velicina >= deoX && pozX <= deoX + sirinaDeo) && (pozY == deoY + visinaDeo || pozY + velicina == deoY) && !nasaoJedan) {
-                        pomerajY = -pomerajY;
-                        isti = true;
-                        $okvirDeo.eq(i).remove();
-                        brojLopti--;
-                        nasaoJedan = true;
+                        if (!(pomerajY < 0 && pozY == deoY + visinaDeo)) {
+                            pomerajY = -pomerajY;
+                            isti = true;
+                            $okvirDeo.eq(i).remove();
+                            brojLopti--;
+                            nasaoJedan = true;
+                        }
                     }
                     if ((pozY + velicina >= deoY && pozY <= deoY + visinaDeo) && (pozX == deoX + sirinaDeo || pozX + velicina == deoX) && !nasaoDrugi) {
                         if (!isti) {
-                            pomerajX = -pomerajX;
                             $okvirDeo.eq(i).remove();
                             brojLopti--;
                             nasaoDrugi = true;
                         }
+                        pomerajX = -pomerajX;
                     }
                     if (nasaoJedan && nasaoDrugi) break;
                 }
@@ -160,7 +170,14 @@
                     pocetak();
                 }
                 if (brojLopti == 0) {
-                    alert("PRESLI STE IGRU");
+                    if (nivo == 5) {
+                        alert("PRESLI STE PRVI NIVO, PAZNJA LOPTICA JE BRZA U DRUGOM NIVOU");
+                        nivo = 10;
+                    }
+                    else {
+                        alert("CESTITAMO, PRESLI STE IGRICU ! Igra ce se restartovati");
+                        document.location.reload();
+                    }
                     clearInterval(interval);
                     pocetak();
                 }
