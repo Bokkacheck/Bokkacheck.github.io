@@ -109,6 +109,8 @@ function postavi(){
     s1  = document.getElementById('p1');
     s2 = document.getElementById('p2');
     s3 = document.getElementById('p3');
+    s4 = document.getElementById('p4');
+    s5 = document.getElementById('p5');
     odrediste = document.getElementById('odrediste');
     dogadjaji = document.getElementById('pomocni');
 
@@ -120,6 +122,12 @@ function postavi(){
 
     s3.addEventListener('dragstart',uhvacen);
     s3.addEventListener('dragend',pusten);
+
+    s4.addEventListener('dragstart',uhvacen);
+    s4.addEventListener('dragend',pusten);
+
+    s5.addEventListener('dragstart',uhvacen);
+    s5.addEventListener('dragend',pusten);
 
     dogadjaji.addEventListener('drop', ubacen, true);
     dogadjaji.addEventListener('dragenter',ulazak, true);
@@ -134,6 +142,8 @@ function uhvacen(e)
     s1.style.opacity = '1';
     s2.style.opacity = '1';
     s3.style.opacity = '1';
+    s4.style.opacity = '1';
+    s5.style.opacity = '1';
     element = e.target;
     var code = element.getAttribute('alt');
     e.dataTransfer.setData('text',code);
